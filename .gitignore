@@ -33,3 +33,13 @@ Warehouse/Models/
 **/*.exe
 **/*.zip
 **/*.iso
+
+Desktop_Workspace/
+
+Gongmyung_Library/Code_AI/Reference/문자.txt
+Gongmyung_Library/Code_AI/Reference/재미나이 토론.txt
+Gongmyung_Library/Code_AI/Reference/시간의 공명문.txt
+Gongmyung_Library/Code_AI/Reference/한국어와 공명문.txt
+Gongmyung_Library/Code_AI/Reference/Chat_Review_Hydrated.md
+Gongmyung_Library/Code_AI/Reference/Chat_Review_Pending.md
+Gongmyung_Library/Code_AI/Reference/chat_origner/
