@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrepeCake - Full IDE</title>
+    <style>
+        :root {
+            --bg-color: #ffe6e6; /* Pink Background */
+            --sticker-bg: #fff0f5; /* Lavender Blush */
+            --header-bg: #ffb7b2; /* Salmon */
+            --border-color: #ffcccc;
+            --text-main: #5a3a3a;
+            --accent: #ff6b6b;
+            --highlight: rgba(255, 255, 0, 0.3);
+            --terminal-bg: #2b1b1b;
+            --terminal-text: #ffcccc;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Consolas', 'Malgun Gothic', monospace;
+            background: var(--bg-color);
+            color: var(--text-main);
+            height: 100vh;
+            overflow: hidden;
+            background-image: radial-gradient(#ffcccc 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* --- Sticker Container --- */
+        .sticker {
+            position: absolute;
+            background: var(--sticker-bg);
+            border: 2px solid var(--header-bg);
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            min-width: 150px;
+            min-height: 100px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .sticker:active {
+            box-shadow: 10px 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Header */
+        .sticker-header {
+            padding: 8px 12px;
+            background: var(--header-bg);
+            color: white;
+            font-weight: bold;
+            cursor: grab;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .sticker-header:active { cursor: grabbing; }
+
+        /* Content */
+        .sticker-content {
+            flex: 1;
+            overflow: auto;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Resize Handle */
+        .resize-handle {
+            width: 15px;
+            height: 15px;
+            background: var(--header-bg);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: se-resize;
+            border-top-left-radius: 10px;
+            z-index: 20;
+        }
+
+        /* --- Specific Styles --- */
+        
+        /* Terminal / Execution */
+        .terminal-view {
+            background: var(--terminal-bg);
+            color: var(--terminal-text);
+            font-family: 'Consolas', monospace;
+            padding: 10px;
+            flex: 1;
+            border-radius: 5px;
+        }
+
+        /* Prompt Input */
+        .prompt-input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            resize: none;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        /* Debugger Table */
+        .debug-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .debug-table td {
+            padding: 4px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .var-name { color: var(--accent); font-weight: bold; }
+        .var-val { color: #555; }
+
+        /* Planning List */
+        .plan-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .plan-check { margin-right: 8px; accent-color: var(--accent); }
+        .plan-text { font-size: 0.9rem; }
+
+        /* Code Viewer */
+        .code-line { padding: 2px 5px; border-radius: 3px; }
+        .code-line.highlighted { background: var(--highlight); font-weight: bold; color: #000; }
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. Planning (기획) -->
+    <div class="sticker" style="top: 20px; left: 20px; width: 250px; height: 300px; z-index: 10;">
+        <div class="sticker-header">📝 Planning (기획)</div>
+        <div class="sticker-content">
+            <div class="plan-item"><input type="checkbox" class="plan-check" checked><span class="plan-text">분홍색 테마 적용</span></div>
+            <div class="plan-item"><input type="checkbox" class="plan-check" checked><span class="plan-text">스티커 UI 구현</span></div>
+            <div class="plan-item"><input type="checkbox" class="plan-check"><span class="plan-text">디버거 연동</span></div>
+            <div class="plan-item"><input type="checkbox" class="plan-check"><span class="plan-text">실행 로그 분석</span></div>
+            <hr style="border:0; border-top:1px dashed #ccc; width:100%;">
+            <div style="font-size:0.8rem; color:#888;">
+                * 사용자 요구사항 분석 중...<br>
+                * 레이어 3단계 분리 필요
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <!-- 2. Debugger (디버거) -->
+    <div class="sticker" style="top: 340px; left: 20px; width: 250px; height: 250px; z-index: 10;">
+        <div class="sticker-header">🐞 Debugger</div>
+        <div class="sticker-content">
+            <table class="debug-table">
+                <tr><td class="var-name">user.id</td><td class="var-val">"Gongmyung"</td></tr>
+                <tr><td class="var-name">status</td><td class="var-val">"Active"</td></tr>
+                <tr><td class="var-name">layer</td><td class="var-val">2 (Logic)</td></tr>
+                <tr><td class="var-name">token</td><td class="var-val">"0xFA3..."</td></tr>
+            </table>
+            <div style="margin-top:10px; font-size:0.8rem; color:var(--accent);">
+                ▶ Call Stack: <br>
+                - main()<br>
+                - processRequest()<br>
+                - validateUser()
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <!-- 3. Code Viewer (메인) -->
+    <div class="sticker" style="top: 20px; left: 290px; width: 600px; height: 500px; z-index: 9;">
+        <div class="sticker-header">🍰 Code Viewer</div>
+        <div class="sticker-content">
+            <div id="viewer-text" style="flex:1; overflow:auto; white-space: pre-wrap; line-height: 1.6;">
+// 🍰 Layer 1: Base (Input)
+function receiveOrder(order) {
+  // 🍓 Layer 2: Filling (Logic)
+  if (!checkIngredients(order)) return false;
+  
+  const result = bakeCrepe();
+  
+  // 🧁 Layer 3: Topping (Output)
+  return servePlate(result);
+}
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <!-- 4. Prompt (프롬프트) -->
+    <div class="sticker" style="top: 540px; left: 290px; width: 600px; height: 150px; z-index: 11;">
+        <div class="sticker-header">💬 Prompt (지시)</div>
+        <div class="sticker-content">
+            <textarea class="prompt-input" placeholder="여기에 AI에게 내릴 지시사항이나 코드를 입력하세요..."></textarea>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <!-- 5. Execution (실행 - 맨 밑) -->
+    <div class="sticker" style="top: 710px; left: 20px; width: 870px; height: 200px; z-index: 12;">
+        <div class="sticker-header">💻 Execution (실행 결과)</div>
+        <div class="sticker-content" style="background: var(--terminal-bg);">
+            <div class="terminal-view">
+                > node server.js<br>
+                [System] Server started on port 3001<br>
+                [Log] User 'Gongmyung' accessed /crepecake<br>
+                [Debug] Layer 2 validation passed.<br>
+                [Output] Rendering complete.<br>
+                ><span style="animation: blink 1s infinite;">_</span>
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <script>
+        // --- Sticker Logic (Drag & Resize) ---
+        let activeSticker = null;
+        let isDragging = false;
+        let isResizing = false;
+        let startX, startY, startLeft, startTop, startWidth, startHeight;
+        let maxZ = 100;
+
+        document.querySelectorAll('.sticker').forEach(el => {
+            // Bring to front
+            el.addEventListener('mousedown', () => {
+                el.style.zIndex = ++maxZ;
+            });
+
+            // Drag Header
+            const header = el.querySelector('.sticker-header');
+            header.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                activeSticker = el;
+                startX = e.clientX;
+                startY = e.clientY;
+                startLeft = el.offsetLeft;
+                startTop = el.offsetTop;
+                e.preventDefault();
+            });
+
+            // Resize Handle
+            const resizer = el.querySelector('.resize-handle');
+            resizer.addEventListener('mousedown', (e) => {
+                isResizing = true;
+                activeSticker = el;
+                startX = e.clientX;
+                startY = e.clientY;
+                startWidth = parseInt(document.defaultView.getComputedStyle(el).width, 10);
+                startHeight = parseInt(document.defaultView.getComputedStyle(el).height, 10);
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!activeSticker) return;
+
+            if (isDragging) {
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                activeSticker.style.left = `${startLeft + dx}px`;
+                activeSticker.style.top = `${startTop + dy}px`;
+            } else if (isResizing) {
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                activeSticker.style.width = `${startWidth + dx}px`;
+                activeSticker.style.height = `${startHeight + dy}px`;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            isResizing = false;
+            activeSticker = null;
+        });
+    </script>
+</body>
+</html>

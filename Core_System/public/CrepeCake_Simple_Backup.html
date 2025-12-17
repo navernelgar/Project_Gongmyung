@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gongmyung CrepeCake</title>
+    <style>
+        :root {
+            --bg-color: #fff0f5; /* Lavender Blush (Soft Pink) */
+            --cake-base: #ffe4e1; /* Misty Rose */
+            --cake-border: #ffb7b2;
+            --text-color: #5d4037; /* Brownish for readability */
+            --accent-color: #ff8a80;
+            --layer-1-bg: #fff;
+            --layer-2-bg: #fff5f5;
+            --layer-3-bg: #ffebee;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Consolas', 'Malgun Gothic', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Header */
+        header {
+            margin-top: 30px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #fff;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        /* Main Container */
+        .cake-container {
+            width: 800px;
+            height: 600px;
+            background: #fff;
+            border: 2px solid var(--cake-border);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 183, 178, 0.3);
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Left: Layer Selector (The "Cake" Slices) */
+        .layer-selector {
+            width: 200px;
+            background: var(--cake-base);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            gap: 15px;
+            border-right: 1px solid var(--cake-border);
+        }
+
+        .layer-btn {
+            padding: 15px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: left;
+            position: relative;
+        }
+
+        .layer-btn:hover {
+            background: #fff;
+            transform: translateX(5px);
+        }
+
+        .layer-btn.active {
+            background: #fff;
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(255, 138, 128, 0.2);
+        }
+
+        .layer-btn h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
+        .layer-btn p { margin: 0; font-size: 0.8rem; color: #888; }
+
+        /* Right: Code Viewer */
+        .code-viewer {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background: #fff;
+            position: relative;
+        }
+
+        .code-line {
+            padding: 5px 10px;
+            margin-bottom: 2px;
+            border-radius: 4px;
+            line-height: 1.6;
+            transition: 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        /* Layer Styles */
+        .layer-1 { border-left-color: #ccc; color: #666; } /* Base / Infra */
+        .layer-2 { border-left-color: var(--accent-color); color: #000; font-weight: bold; background: var(--layer-2-bg); } /* Logic */
+        .layer-3 { border-left-color: #888; color: #555; font-style: italic; } /* Presentation */
+
+        /* Filter Logic */
+        .hidden {
+            opacity: 0.1;
+            filter: blur(1px);
+        }
+
+        /* Footer */
+        .footer-controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .action-btn {
+            padding: 10px 20px;
+            border: 1px solid var(--cake-border);
+            background: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .action-btn:hover {
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🍰 Gongmyung CrepeCake</h1>
+        <div class="subtitle">Layered Code Analysis System</div>
+    </header>
+
+    <div class="cake-container">
+        <!-- Layer Selector -->
+        <div class="layer-selector">
+            <div class="layer-btn active" onclick="setLayer('all')">
+                <h3>🍰 Whole Cake</h3>
+                <p>View all layers</p>
+            </div>
+            <div class="layer-btn" onclick="setLayer(1)">
+                <h3>🥞 Layer 1</h3>
+                <p>Base / Infrastructure</p>
+            </div>
+            <div class="layer-btn" onclick="setLayer(2)">
+                <h3>🍓 Layer 2</h3>
+                <p>Core Logic / Flow</p>
+            </div>
+            <div class="layer-btn" onclick="setLayer(3)">
+                <h3>🧁 Layer 3</h3>
+                <p>Presentation / UI</p>
+            </div>
+        </div>
+
+        <!-- Code Viewer -->
+        <div class="code-viewer" id="viewer">
+            <!-- Content will be injected here -->
+        </div>
+    </div>
+
+    <div class="footer-controls">
+        <button class="action-btn" onclick="loadFile()">📂 Load File</button>
+        <a href="/underworld" class="action-btn">🚪 Exit to Underworld</a>
+    </div>
+
+    <script>
+        // Mock Data
+        const sampleCode = [
+            { layer: 1, text: "import { Server } from 'http'; // [Infra] 서버 모듈 로드" },
+            { layer: 1, text: "const PORT = 3001; // [Infra] 포트 설정" },
+            { layer: 2, text: "function handleRequest(req, res) { // [Logic] 요청 처리 시작" },
+            { layer: 2, text: "  if (req.url === '/crepecake') { // [Logic] 라우팅 분기" },
+            { layer: 3, text: "    res.write('<h1>Welcome to CrepeCake</h1>'); // [UI] 화면 렌더링" },
+            { layer: 2, text: "    return res.end(); // [Logic] 응답 종료" },
+            { layer: 2, text: "  }" },
+            { layer: 1, text: "}" }
+        ];
+
+        function renderCode() {
+            const viewer = document.getElementById('viewer');
+            viewer.innerHTML = '';
+            
+            sampleCode.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = `code-line layer-${line.layer}`;
+                div.innerText = line.text;
+                viewer.appendChild(div);
+            });
+        }
+
+        function setLayer(layerId) {
+            // Update Buttons
+            document.querySelectorAll('.layer-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Filter Code
+            const lines = document.querySelectorAll('.code-line');
+            lines.forEach(line => {
+                if (layerId === 'all') {
+                    line.classList.remove('hidden');
+                } else {
+                    if (line.classList.contains(`layer-${layerId}`)) {
+                        line.classList.remove('hidden');
+                    } else {
+                        line.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        function loadFile() {
+            alert("파일 로드 기능은 준비 중입니다.");
+        }
+
+        // Init
+        renderCode();
+
+    </script>
+</body>
+</html>

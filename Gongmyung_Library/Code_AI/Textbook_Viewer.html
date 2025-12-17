@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gongmyung Textbook Viewer</title>
+    <style>
+        :root {
+            --bg-paper: #fdfbf7;
+            --text-main: #2c3e50;
+            --accent-color: #3498db;
+            --border-color: #e0e0e0;
+            --code-bg: #f8f9fa;
+            --concept-bg: #e8f6f3;
+            --gongmyung-bg: #f4ecf7;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'KoPub Batang', 'Malgun Gothic', serif;
+            background-color: #f0f2f5;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+        #app-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+        
+        /* Sidebar (TOC) */
+        #sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .chapter-item {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            transition: background 0.2s;
+        }
+        .chapter-item:hover {
+            background: #f0f0f0;
+        }
+        .chapter-item.active {
+            background: var(--concept-bg);
+            color: #16a085;
+            font-weight: bold;
+        }
+
+        /* Main Content (Page) */
+        #content-area {
+            flex: 1;
+            background: var(--bg-paper);
+            overflow-y: auto;
+            padding: 40px 60px;
+            position: relative;
+        }
+        
+        /* Typography & Sections */
+        h1.doc-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .doc-meta {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 0.9em;
+        }
+
+        .section-block {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* 1. Concept */
+        .section-concept {
+            background: var(--concept-bg);
+            border-left: 5px solid #1abc9c;
+        }
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: currentColor;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        /* 2. Structure */
+        .section-structure {
+            border-left: 5px solid #f39c12;
+        }
+
+        /* 3. Code */
+        .section-code {
+            border-left: 5px solid #3498db;
+        }
+        pre {
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+            border: 1px solid #eee;
+        }
+
+        /* 4. Implementation */
+        .section-impl {
+            border-left: 5px solid #9b59b6;
+        }
+
+        /* 5. Execution */
+        .section-exec {
+            background: #2c3e50;
+            color: #ecf0f1;
+            border-left: 5px solid #34495e;
+        }
+
+        /* 6. Gongmyung */
+        .section-gongmyung {
+            background: var(--gongmyung-bg);
+            border-left: 5px solid #8e44ad;
+            font-style: italic;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            #app-container { flex-direction: column; }
+            #sidebar { width: 100%; height: 200px; border-right: none; border-bottom: 1px solid var(--border-color); }
+            #content-area { padding: 20px; }
+        }
+        
+        .nav-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-decoration: none;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .nav-btn:hover { background: #eee; }
+    </style>
+</head>
+<body>
+
+<div id="app-container">
+    <div id="sidebar">
+        <div class="book-title">📚 Gongmyung Library</div>
+        <div id="chapter-list">
+            <!-- File list will be injected here -->
+        </div>
+    </div>
+
+    <div id="content-area">
+        <a href="/CrepeCake.html" class="nav-btn">✏️ Edit Mode</a>
+        <div id="document-viewer">
+            <div style="text-align: center; margin-top: 100px; color: #aaa;">
+                Select a chapter from the left to begin reading.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function loadFiles() {
+        try {
+            const res = await fetch('/api/files');
+            const files = await res.json();
+            const list = document.getElementById('chapter-list');
+            list.innerHTML = '';
+            files.forEach(file => {
+                const div = document.createElement('div');
+                div.className = 'chapter-item';
+                div.innerText = file.replace(/\.md$/, '').replace(/_/g, ' ');
+                div.onclick = () => {
+                    document.querySelectorAll('.chapter-item').forEach(el => el.classList.remove('active'));
+                    div.classList.add('active');
+                    loadChapter(file);
+                };
+                list.appendChild(div);
+            });
+        } catch (e) {
+            console.error("Error loading files:", e);
+        }
+    }
+
+    async function loadChapter(path) {
+        try {
+            const res = await fetch(`/api/read?path=${encodeURIComponent(path)}`);
+            const content = await res.text();
+            renderChapter(path, content);
+        } catch (e) {
+            console.error("Error loading chapter:", e);
+        }
+    }
+
+    function renderChapter(filename, text) {
+        const viewer = document.getElementById('document-viewer');
+        
+        // Parse Layers
+        const layers = {};
+        const parts = text.split(/^# Layer (\d+): (.*)$/gm);
+        
+        if (parts.length > 1) {
+            for (let i = 1; i < parts.length; i += 3) {
+                const layerNum = parts[i];
+                const title = parts[i+1];
+                const body = parts[i+2].trim();
+                layers[layerNum] = { title, body };
+            }
+        } else {
+            // Fallback
+            layers[1] = { title: "Content", body: text };
+        }
+
+        let html = `
+            <h1 class="doc-title">${filename.replace(/\.md$/, '').replace(/_/g, ' ')}</h1>
+            <div class="doc-meta">Last updated: ${new Date().toLocaleDateString()}</div>
+        `;
+
+        // Layer 1: Concept
+        if (layers[1] && layers[1].body) {
+            html += `
+                <div class="section-block section-concept">
+                    <div class="section-title">1. Concept (정의)</div>
+                    <div>${formatText(layers[1].body)}</div>
+                </div>
+            `;
+        }
+
+        // Layer 2: Structure
+        if (layers[2] && layers[2].body) {
+            html += `
+                <div class="section-block section-structure">
+                    <div class="section-title">2. Structure (구조)</div>
+                    <div>${formatText(layers[2].body)}</div>
+                </div>
+            `;
+        }
+
+        // Layer 3: Code
+        if (layers[3] && layers[3].body) {
+            html += `
+                <div class="section-block section-code">
+                    <div class="section-title">3. Code (알고리즘)</div>
+                    <pre>${escapeHtml(layers[3].body)}</pre>
+                </div>
+            `;
+        }
+
+        // Layer 4: Implementation
+        if (layers[4] && layers[4].body) {
+            html += `
+                <div class="section-block section-impl">
+                    <div class="section-title">4. Implementation (구현)</div>
+                    <div>${formatText(layers[4].body)}</div>
+                </div>
+            `;
+        }
+
+        // Layer 5: Execution
+        if (layers[5] && layers[5].body) {
+            html += `
+                <div class="section-block section-exec">
+                    <div class="section-title">5. Execution (실행 결과)</div>
+                    <pre>${escapeHtml(layers[5].body)}</pre>
+                </div>
+            `;
+        }
+
+        // Layer 6: Gongmyung
+        if (layers[6] && layers[6].body) {
+            html += `
+                <div class="section-block section-gongmyung">
+                    <div class="section-title">6. Gongmyung (공명문)</div>
+                    <div>${formatText(layers[6].body)}</div>
+                </div>
+            `;
+        }
+
+        viewer.innerHTML = html;
+    }
+
+    function formatText(text) {
+        return text.replace(/\n/g, '<br>');
+    }
+
+    function escapeHtml(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    loadFiles();
+</script>
+
+</body>
+</html>

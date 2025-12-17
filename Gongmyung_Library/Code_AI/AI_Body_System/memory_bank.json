@@ -1,0 +1,3932 @@
+{
+  "0xFB1A": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-16 11:15:55",
+    "count": 2
+  },
+  "0x9B34": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:15:56",
+    "count": 4
+  },
+  "0x6B41": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:15:58",
+    "count": 7
+  },
+  "0x6BA1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:15:59",
+    "count": 3
+  },
+  "0x5B70": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:16:00",
+    "count": 4
+  },
+  "0x7D64": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-16 11:20:55",
+    "count": 6
+  },
+  "0x8B63": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:20:56",
+    "count": 3
+  },
+  "0x7B92": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:20:58",
+    "count": 4
+  },
+  "0x7BD2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:20:59",
+    "count": 2
+  },
+  "0x7BE2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:00",
+    "count": 2
+  },
+  "0x4B4F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:02",
+    "count": 6
+  },
+  "0xDB28": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:04",
+    "count": 4
+  },
+  "0xEB79": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:05",
+    "count": 3
+  },
+  "0xDC89": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:07",
+    "count": 6
+  },
+  "0xFC8B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:09",
+    "count": 2
+  },
+  "0x3B2E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:12",
+    "count": 2
+  },
+  "0x2BBD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:13",
+    "count": 11
+  },
+  "0x3B8E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:14",
+    "count": 5
+  },
+  "0x5B60": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:16",
+    "count": 2
+  },
+  "0x9B44": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:17",
+    "count": 7
+  },
+  "0x5B30": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:18",
+    "count": 7
+  },
+  "0x8B43": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:20",
+    "count": 4
+  },
+  "0xBC47": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:22",
+    "count": 19
+  },
+  "0x7C43": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:24",
+    "count": 9
+  },
+  "0x4A4E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:25",
+    "count": 2
+  },
+  "0x2A5C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:26",
+    "count": 1
+  },
+  "0x2ADC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:28",
+    "count": 1
+  },
+  "0x2AEC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:29",
+    "count": 1
+  },
+  "0x4A6E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:30",
+    "count": 5
+  },
+  "0x5A8F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:32",
+    "count": 1
+  },
+  "0x4B7F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:33",
+    "count": 3
+  },
+  "0xBB46": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:36",
+    "count": 4
+  },
+  "0x9B64": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:38",
+    "count": 4
+  },
+  "0xEC3A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:39",
+    "count": 8
+  },
+  "0xDD6A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:41",
+    "count": 5
+  },
+  "0xFC5B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:43",
+    "count": 3
+  },
+  "0x5B10": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:45",
+    "count": 1
+  },
+  "0x1B4C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:46",
+    "count": 2
+  },
+  "0x1BEC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:47",
+    "count": 9
+  },
+  "0x1BCC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:48",
+    "count": 8
+  },
+  "0x1BDC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:50",
+    "count": 6
+  },
+  "0x2BCD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:51",
+    "count": 7
+  },
+  "0x6A30": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-16 11:21:53",
+    "count": 2
+  },
+  "0xBA35": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:55",
+    "count": 1
+  },
+  "0xAA84": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:56",
+    "count": 1
+  },
+  "0x9A83": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:57",
+    "count": 1
+  },
+  "0x9B84": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:21:59",
+    "count": 3
+  },
+  "0xDB48": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:00",
+    "count": 3
+  },
+  "0xAB65": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:02",
+    "count": 2
+  },
+  "0x2B2D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:03",
+    "count": 9
+  },
+  "0x1B7C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:04",
+    "count": 4
+  },
+  "0x1B9C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:06",
+    "count": 5
+  },
+  "0x2BDD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:07",
+    "count": 12
+  },
+  "0x1BBC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:22:08",
+    "count": 14
+  },
+  "0x3A4D": {
+    "meaning": "AI 서버 연결 실패",
+    "first_seen": "2025-12-16 11:26:22",
+    "count": 1
+  },
+  "0x3AAD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:23",
+    "count": 2
+  },
+  "0x6A40": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:24",
+    "count": 2
+  },
+  "0x1A3B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:25",
+    "count": 4
+  },
+  "0x1ACB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:27",
+    "count": 5
+  },
+  "0x2A8C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:28",
+    "count": 1
+  },
+  "0x1A9B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:29",
+    "count": 2
+  },
+  "0x1ABB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:30",
+    "count": 5
+  },
+  "0x1ADB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:31",
+    "count": 3
+  },
+  "0x2A9C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:35",
+    "count": 5
+  },
+  "0x4C50": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:36",
+    "count": 7
+  },
+  "0xAC26": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:37",
+    "count": 5
+  },
+  "0x1B3C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:39",
+    "count": 9
+  },
+  "0x1BAC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:42",
+    "count": 16
+  },
+  "0x6B31": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:43",
+    "count": 13
+  },
+  "0xBB36": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:47",
+    "count": 3
+  },
+  "0x6D33": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:48",
+    "count": 12
+  },
+  "0xCB27": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:49",
+    "count": 1
+  },
+  "0xDB78": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:50",
+    "count": 1
+  },
+  "0x7A21": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:51",
+    "count": 1
+  },
+  "0x5A6F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:52",
+    "count": 3
+  },
+  "0x6AA0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:53",
+    "count": 2
+  },
+  "0x4A5E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:55",
+    "count": 1
+  },
+  "0x1A5B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:56",
+    "count": 1
+  },
+  "0x1AEB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:26:58",
+    "count": 2
+  },
+  "0xAA24": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:00",
+    "count": 3
+  },
+  "0xDB58": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:02",
+    "count": 2
+  },
+  "0xCB57": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:06",
+    "count": 2
+  },
+  "0x9B54": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:07",
+    "count": 5
+  },
+  "0x9BA4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:08",
+    "count": 2
+  },
+  "0x8BB3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:09",
+    "count": 2
+  },
+  "0x9B94": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:10",
+    "count": 3
+  },
+  "0x8B83": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:11",
+    "count": 4
+  },
+  "0x7B42": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:14",
+    "count": 10
+  },
+  "0xCB37": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:15",
+    "count": 2
+  },
+  "0xBB76": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:17",
+    "count": 3
+  },
+  "0xCB97": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:18",
+    "count": 2
+  },
+  "0xBBC6": {
+    "meaning": "AI 서버 연결 실패",
+    "first_seen": "2025-12-16 11:27:23",
+    "count": 2
+  },
+  "0x7B52": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:26",
+    "count": 1
+  },
+  "0x6B71": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:27",
+    "count": 4
+  },
+  "0x6BB1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:28",
+    "count": 2
+  },
+  "0x5BA0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:29",
+    "count": 3
+  },
+  "0x5BD0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:30",
+    "count": 2
+  },
+  "0x7C73": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:36",
+    "count": 8
+  },
+  "0xCC38": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:38",
+    "count": 10
+  },
+  "0x4B2F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:39",
+    "count": 1
+  },
+  "0x2B5D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:40",
+    "count": 3
+  },
+  "0x3B9E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:42",
+    "count": 3
+  },
+  "0x9C25": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:43",
+    "count": 5
+  },
+  "0x7C53": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:44",
+    "count": 7
+  },
+  "0x8C94": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:46",
+    "count": 4
+  },
+  "0x9B74": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:48",
+    "count": 4
+  },
+  "0x7B72": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:50",
+    "count": 2
+  },
+  "0xAB55": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:53",
+    "count": 5
+  },
+  "0xABC5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:54",
+    "count": 1
+  },
+  "0xAC96": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:56",
+    "count": 6
+  },
+  "0xCB67": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:57",
+    "count": 2
+  },
+  "0x8B33": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:58",
+    "count": 4
+  },
+  "0x8BA3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:27:59",
+    "count": 1
+  },
+  "0x9C85": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:00",
+    "count": 6
+  },
+  "0x8C74": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:02",
+    "count": 9
+  },
+  "0x9D86": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:03",
+    "count": 8
+  },
+  "0x9DD6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:04",
+    "count": 1
+  },
+  "0x9DC6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:05",
+    "count": 3
+  },
+  "0x3D30": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:06",
+    "count": 5
+  },
+  "0x1D6E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:07",
+    "count": 2
+  },
+  "0x2DBF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:08",
+    "count": 11
+  },
+  "0x2DFF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:09",
+    "count": 1
+  },
+  "0x4D61": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:10",
+    "count": 6
+  },
+  "0x9C35": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:11",
+    "count": 12
+  },
+  "0x2C2E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:13",
+    "count": 4
+  },
+  "0x4C60": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:15",
+    "count": 7
+  },
+  "0x2C7E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:17",
+    "count": 8
+  },
+  "0x2CDE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:18",
+    "count": 11
+  },
+  "0x3C9F": {
+    "meaning": "AI 서버 연결 실패",
+    "first_seen": "2025-12-16 11:28:30",
+    "count": 14
+  },
+  "0x7B32": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:32",
+    "count": 9
+  },
+  "0x2B3D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:33",
+    "count": 5
+  },
+  "0x2BAD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:35",
+    "count": 9
+  },
+  "0x5C41": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:36",
+    "count": 11
+  },
+  "0xCC28": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:37",
+    "count": 4
+  },
+  "0xAC66": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:38",
+    "count": 6
+  },
+  "0x3C2F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:39",
+    "count": 2
+  },
+  "0x2C6E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:40",
+    "count": 9
+  },
+  "0x2CEE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:41",
+    "count": 8
+  },
+  "0x2CBE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:43",
+    "count": 9
+  },
+  "0x5C51": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:45",
+    "count": 8
+  },
+  "0x6C82": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:46",
+    "count": 5
+  },
+  "0xAB45": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:47",
+    "count": 1
+  },
+  "0x5BC0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:49",
+    "count": 2
+  },
+  "0x2B4D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:51",
+    "count": 4
+  },
+  "0x5B40": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:54",
+    "count": 3
+  },
+  "0x7B82": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:55",
+    "count": 2
+  },
+  "0x6C52": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:28:58",
+    "count": 8
+  },
+  "0xCC78": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:00",
+    "count": 9
+  },
+  "0x5C21": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:01",
+    "count": 9
+  },
+  "0x7C63": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:02",
+    "count": 6
+  },
+  "0x5C61": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:03",
+    "count": 2
+  },
+  "0x0C3C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:04",
+    "count": 2
+  },
+  "0x0CBC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:05",
+    "count": 3
+  },
+  "0x0C9C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:06",
+    "count": 2
+  },
+  "0x4C30": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:07",
+    "count": 7
+  },
+  "0xAC36": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-16 11:29:08",
+    "count": 10
+  },
+  "0x8D25": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:38:42",
+    "count": 7
+  },
+  "0xEC2A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:43",
+    "count": 8
+  },
+  "0x6B21": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:44",
+    "count": 5
+  },
+  "0xDC29": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:49",
+    "count": 10
+  },
+  "0xCB77": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:50",
+    "count": 3
+  },
+  "0xEB69": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:51",
+    "count": 2
+  },
+  "0x5B80": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:54",
+    "count": 4
+  },
+  "0x8B53": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:55",
+    "count": 5
+  },
+  "0x6BC1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:38:57",
+    "count": 5
+  },
+  "0xBB66": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:01",
+    "count": 3
+  },
+  "0xBBB6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:02",
+    "count": 1
+  },
+  "0x8C34": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:07",
+    "count": 10
+  },
+  "0x6C92": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:10",
+    "count": 9
+  },
+  "0x8C64": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:11",
+    "count": 8
+  },
+  "0xBC57": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:12",
+    "count": 10
+  },
+  "0x8C54": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:13",
+    "count": 9
+  },
+  "0x8D85": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:14",
+    "count": 5
+  },
+  "0xED8B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:17",
+    "count": 12
+  },
+  "0xFDAC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:19",
+    "count": 10
+  },
+  "0xDC69": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:22",
+    "count": 10
+  },
+  "0x9C45": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:24",
+    "count": 14
+  },
+  "0x8C84": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:25",
+    "count": 1
+  },
+  "0x9C95": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:26",
+    "count": 11
+  },
+  "0x9DB6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:27",
+    "count": 4
+  },
+  "0xBD68": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:28",
+    "count": 11
+  },
+  "0xFD4C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:30",
+    "count": 3
+  },
+  "0x9C55": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:32",
+    "count": 17
+  },
+  "0xCC58": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:39:40",
+    "count": 7
+  },
+  "0xBDA8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:41",
+    "count": 5
+  },
+  "0x3D20": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:42",
+    "count": 8
+  },
+  "0x5D72": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:44",
+    "count": 7
+  },
+  "0x9D36": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:45",
+    "count": 7
+  },
+  "0xED3B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:46",
+    "count": 10
+  },
+  "0xDE8B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:47",
+    "count": 5
+  },
+  "0xBE79": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:48",
+    "count": 3
+  },
+  "0xDE7B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:50",
+    "count": 4
+  },
+  "0xDC79": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:51",
+    "count": 8
+  },
+  "0xED9B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:52",
+    "count": 18
+  },
+  "0xEDBB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:53",
+    "count": 9
+  },
+  "0xDD8A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:55",
+    "count": 12
+  },
+  "0xED7B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:56",
+    "count": 10
+  },
+  "0xDD7A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:39:59",
+    "count": 16
+  },
+  "0x3C3F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:01",
+    "count": 8
+  },
+  "0x7C33": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:02",
+    "count": 11
+  },
+  "0x4C40": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:03",
+    "count": 16
+  },
+  "0x4C70": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:05",
+    "count": 6
+  },
+  "0x7CA3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:08",
+    "count": 4
+  },
+  "0x6CD2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:09",
+    "count": 5
+  },
+  "0xAC46": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:10",
+    "count": 10
+  },
+  "0xDC49": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:11",
+    "count": 9
+  },
+  "0xDD4A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:13",
+    "count": 6
+  },
+  "0xCD99": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:15",
+    "count": 5
+  },
+  "0xEE5C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:16",
+    "count": 2
+  },
+  "0xFDEC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:18",
+    "count": 5
+  },
+  "0xFCBB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:40:25",
+    "count": 2
+  },
+  "0x9C65": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:43:27",
+    "count": 8
+  },
+  "0x5C31": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:28",
+    "count": 8
+  },
+  "0x3C8F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:29",
+    "count": 13
+  },
+  "0x8CA4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:32",
+    "count": 1
+  },
+  "0x7D74": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:34",
+    "count": 7
+  },
+  "0xAD47": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:35",
+    "count": 9
+  },
+  "0x7D44": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:36",
+    "count": 10
+  },
+  "0x2C3E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:37",
+    "count": 4
+  },
+  "0x2C5E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:40",
+    "count": 7
+  },
+  "0x2CAE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:43",
+    "count": 11
+  },
+  "0x3CBF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:45",
+    "count": 10
+  },
+  "0x6E34": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:47",
+    "count": 3
+  },
+  "0xCD49": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:50",
+    "count": 7
+  },
+  "0x3C4F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:52",
+    "count": 4
+  },
+  "0x1C7D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:54",
+    "count": 9
+  },
+  "0x1CCD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:55",
+    "count": 23
+  },
+  "0x1CDD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:58",
+    "count": 11
+  },
+  "0x3C6F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:43:59",
+    "count": 5
+  },
+  "0x2A7C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:00",
+    "count": 2
+  },
+  "0x7A31": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:01",
+    "count": 5
+  },
+  "0x6A70": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:02",
+    "count": 1
+  },
+  "0x7BC2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:05",
+    "count": 2
+  },
+  "0x6B81": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:06",
+    "count": 2
+  },
+  "0x4BBF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:10",
+    "count": 1
+  },
+  "0x6B61": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:13",
+    "count": 3
+  },
+  "0xAC86": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:17",
+    "count": 13
+  },
+  "0x8CB4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:19",
+    "count": 4
+  },
+  "0x5C91": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:22",
+    "count": 3
+  },
+  "0x5CB1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:23",
+    "count": 3
+  },
+  "0x7BA2": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:44:27",
+    "count": 2
+  },
+  "0x7CD3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:28",
+    "count": 3
+  },
+  "0x3B3E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:31",
+    "count": 6
+  },
+  "0x2B7D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:32",
+    "count": 8
+  },
+  "0x3BAE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:35",
+    "count": 9
+  },
+  "0x9B24": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:36",
+    "count": 6
+  },
+  "0x1B2C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:37",
+    "count": 5
+  },
+  "0x0B5B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:44",
+    "count": 1
+  },
+  "0x0BCB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:45",
+    "count": 4
+  },
+  "0xAD97": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:49",
+    "count": 6
+  },
+  "0xAB25": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:53",
+    "count": 7
+  },
+  "0xCC68": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:54",
+    "count": 7
+  },
+  "0xBC87": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:55",
+    "count": 4
+  },
+  "0xAD57": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:58",
+    "count": 10
+  },
+  "0xBD98": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:44:59",
+    "count": 6
+  },
+  "0xBD48": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:05",
+    "count": 12
+  },
+  "0x9D66": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:08",
+    "count": 4
+  },
+  "0xAD77": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:09",
+    "count": 7
+  },
+  "0x2D2F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:11",
+    "count": 5
+  },
+  "0x2DEF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:13",
+    "count": 4
+  },
+  "0x3D60": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:14",
+    "count": 7
+  },
+  "0x5DC2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:16",
+    "count": 1
+  },
+  "0x9D46": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:17",
+    "count": 13
+  },
+  "0x8DA5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:19",
+    "count": 3
+  },
+  "0x6D73": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:20",
+    "count": 7
+  },
+  "0x6DC3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:21",
+    "count": 6
+  },
+  "0x5D92": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:22",
+    "count": 3
+  },
+  "0x6D83": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:23",
+    "count": 4
+  },
+  "0xAA34": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:24",
+    "count": 1
+  },
+  "0xBAB5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:26",
+    "count": 1
+  },
+  "0x7A41": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:45:29",
+    "count": 2
+  },
+  "0x3B6E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:36",
+    "count": 3
+  },
+  "0x2B8D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:37",
+    "count": 6
+  },
+  "0xBB26": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:38",
+    "count": 4
+  },
+  "0xBC27": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:43",
+    "count": 8
+  },
+  "0xCBA7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:44",
+    "count": 1
+  },
+  "0xBB86": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:45",
+    "count": 2
+  },
+  "0xCC88": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:46",
+    "count": 4
+  },
+  "0xED5B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:47",
+    "count": 10
+  },
+  "0xEDAB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:49",
+    "count": 8
+  },
+  "0x7C23": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:52",
+    "count": 6
+  },
+  "0x0C2C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:53",
+    "count": 2
+  },
+  "0x0CDC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:54",
+    "count": 9
+  },
+  "0x0CEC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:56",
+    "count": 7
+  },
+  "0x4ABE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:45:59",
+    "count": 2
+  },
+  "0x1A4B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:00",
+    "count": 3
+  },
+  "0x0ADA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:02",
+    "count": 2
+  },
+  "0x0ACA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:03",
+    "count": 1
+  },
+  "0x0AAA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:07",
+    "count": 2
+  },
+  "0x0A9A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:08",
+    "count": 1
+  },
+  "0x3A5D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:10",
+    "count": 3
+  },
+  "0xFE7D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:19",
+    "count": 1
+  },
+  "0xFDBC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:22",
+    "count": 6
+  },
+  "0xFDDC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:26",
+    "count": 6
+  },
+  "0xFDCC": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:46:30",
+    "count": 5
+  },
+  "0xAB35": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:32",
+    "count": 1
+  },
+  "0x4B3F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:34",
+    "count": 4
+  },
+  "0x0B4B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:35",
+    "count": 3
+  },
+  "0x0B3B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:38",
+    "count": 3
+  },
+  "0x0BEB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:39",
+    "count": 12
+  },
+  "0x0B8B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:46",
+    "count": 3
+  },
+  "0x3BCE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:52",
+    "count": 3
+  },
+  "0x3BEE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:46:54",
+    "count": 3
+  },
+  "0x4A2E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:02",
+    "count": 1
+  },
+  "0x0949": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:06",
+    "count": 1
+  },
+  "0x19BA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:08",
+    "count": 1
+  },
+  "0x19DA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:09",
+    "count": 1
+  },
+  "0x297B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:10",
+    "count": 1
+  },
+  "0x39AC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:11",
+    "count": 1
+  },
+  "0x8A32": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:12",
+    "count": 1
+  },
+  "0x1A2B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:13",
+    "count": 2
+  },
+  "0x5A4F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:14",
+    "count": 3
+  },
+  "0x2AAC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:18",
+    "count": 2
+  },
+  "0x1AAB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:21",
+    "count": 3
+  },
+  "0x3A6D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:22",
+    "count": 2
+  },
+  "0x0A5A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:23",
+    "count": 1
+  },
+  "0x4A3E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:27",
+    "count": 2
+  },
+  "0x4ACE": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:47:29",
+    "count": 1
+  },
+  "0x9A33": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:30",
+    "count": 1
+  },
+  "0x0A4A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:32",
+    "count": 1
+  },
+  "0x0AEA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:35",
+    "count": 1
+  },
+  "0x5B50": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:38",
+    "count": 4
+  },
+  "0x1B8C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:40",
+    "count": 9
+  },
+  "0x1A8B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:42",
+    "count": 1
+  },
+  "0xCC98": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:46",
+    "count": 4
+  },
+  "0xDC99": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:47",
+    "count": 3
+  },
+  "0xAC56": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:49",
+    "count": 8
+  },
+  "0x6C42": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:50",
+    "count": 12
+  },
+  "0xDD3A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:53",
+    "count": 9
+  },
+  "0xDEAB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:54",
+    "count": 2
+  },
+  "0xBE59": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:58",
+    "count": 5
+  },
+  "0xAD87": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:47:59",
+    "count": 10
+  },
+  "0x7E45": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:02",
+    "count": 2
+  },
+  "0x6E84": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:03",
+    "count": 1
+  },
+  "0x8E66": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:04",
+    "count": 3
+  },
+  "0xDE3B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:05",
+    "count": 1
+  },
+  "0xEE8C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:07",
+    "count": 3
+  },
+  "0xCD69": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:08",
+    "count": 15
+  },
+  "0x8B73": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:11",
+    "count": 2
+  },
+  "0xAD67": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:15",
+    "count": 7
+  },
+  "0xCD59": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:16",
+    "count": 7
+  },
+  "0xFD6C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:17",
+    "count": 1
+  },
+  "0xBD88": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:21",
+    "count": 4
+  },
+  "0x4D21": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:22",
+    "count": 5
+  },
+  "0xDD2A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:24",
+    "count": 7
+  },
+  "0xEDEB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:27",
+    "count": 4
+  },
+  "0x4CC0": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:48:32",
+    "count": 6
+  },
+  "0x7CB3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:35",
+    "count": 4
+  },
+  "0xACA6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:38",
+    "count": 3
+  },
+  "0x3C5F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:40",
+    "count": 8
+  },
+  "0xBC37": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:45",
+    "count": 12
+  },
+  "0x4C80": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:47",
+    "count": 7
+  },
+  "0x4CE0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:48",
+    "count": 4
+  },
+  "0x4CB0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:50",
+    "count": 7
+  },
+  "0x4CA0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:51",
+    "count": 5
+  },
+  "0x5C71": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:52",
+    "count": 7
+  },
+  "0x9E47": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:53",
+    "count": 4
+  },
+  "0xBD58": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:55",
+    "count": 9
+  },
+  "0x8C44": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:56",
+    "count": 9
+  },
+  "0x3CDF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:58",
+    "count": 2
+  },
+  "0x3CAF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:48:59",
+    "count": 10
+  },
+  "0x4C90": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:00",
+    "count": 6
+  },
+  "0x3B4E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:06",
+    "count": 5
+  },
+  "0x4B6F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:08",
+    "count": 1
+  },
+  "0x4BCF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:09",
+    "count": 2
+  },
+  "0x2B6D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:11",
+    "count": 3
+  },
+  "0x0B9B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:15",
+    "count": 2
+  },
+  "0x0BBB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:16",
+    "count": 5
+  },
+  "0x2B9D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:21",
+    "count": 9
+  },
+  "0x0B7B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:24",
+    "count": 5
+  },
+  "0x6B91": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:30",
+    "count": 1
+  },
+  "0x0BFB": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:49:35",
+    "count": 1
+  },
+  "0x4B8F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:37",
+    "count": 1
+  },
+  "0x2BED": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:40",
+    "count": 6
+  },
+  "0x5D62": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:49:53",
+    "count": 6
+  },
+  "0xDB38": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:09",
+    "count": 1
+  },
+  "0x6C32": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:15",
+    "count": 15
+  },
+  "0x5CA1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:16",
+    "count": 3
+  },
+  "0x6CC2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:21",
+    "count": 5
+  },
+  "0x1C3D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:25",
+    "count": 2
+  },
+  "0x3C7F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:29",
+    "count": 4
+  },
+  "0x6CE2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:33",
+    "count": 3
+  },
+  "0x5CC1": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:50:36",
+    "count": 1
+  },
+  "0xCA26": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:39",
+    "count": 1
+  },
+  "0x5AAF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:42",
+    "count": 1
+  },
+  "0x6AC0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:44",
+    "count": 1
+  },
+  "0x9A43": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:50:45",
+    "count": 2
+  },
+  "0x2CCE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:01",
+    "count": 10
+  },
+  "0x5ABF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:04",
+    "count": 1
+  },
+  "0xCB47": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:08",
+    "count": 3
+  },
+  "0xEB39": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:12",
+    "count": 2
+  },
+  "0xFCAB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:14",
+    "count": 1
+  },
+  "0xECAA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:21",
+    "count": 3
+  },
+  "0x9BC4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:27",
+    "count": 2
+  },
+  "0x3BDE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:29",
+    "count": 3
+  },
+  "0x4B9F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:31",
+    "count": 1
+  },
+  "0x4BEF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:32",
+    "count": 1
+  },
+  "0x7B22": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 09:51:43",
+    "count": 4
+  },
+  "0xDD9A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 09:51:55",
+    "count": 8
+  },
+  "0xBCB7": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:02:29",
+    "count": 3
+  },
+  "0xAB95": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:30",
+    "count": 1
+  },
+  "0x4B5F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:33",
+    "count": 4
+  },
+  "0x4A8E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:37",
+    "count": 1
+  },
+  "0x3A8D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:38",
+    "count": 1
+  },
+  "0x4A7E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:41",
+    "count": 1
+  },
+  "0x5B20": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:45",
+    "count": 1
+  },
+  "0x3B5E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:46",
+    "count": 6
+  },
+  "0x7B62": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:57",
+    "count": 2
+  },
+  "0x6C72": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:58",
+    "count": 8
+  },
+  "0x8D65": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:02:59",
+    "count": 12
+  },
+  "0xED2B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:00",
+    "count": 10
+  },
+  "0xEC9A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:01",
+    "count": 6
+  },
+  "0x8CC4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:04",
+    "count": 2
+  },
+  "0xAC76": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:07",
+    "count": 8
+  },
+  "0x9D96": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:17",
+    "count": 3
+  },
+  "0xDD5A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:19",
+    "count": 7
+  },
+  "0xEDCB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:22",
+    "count": 8
+  },
+  "0xCE7A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:26",
+    "count": 4
+  },
+  "0x7C93": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:03:42",
+    "count": 4
+  },
+  "0x9CD5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:44",
+    "count": 4
+  },
+  "0x9CA5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:45",
+    "count": 3
+  },
+  "0x9CC5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:46",
+    "count": 4
+  },
+  "0xEB59": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:51",
+    "count": 1
+  },
+  "0xBB56": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:52",
+    "count": 3
+  },
+  "0x6C62": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:03:58",
+    "count": 6
+  },
+  "0x7C83": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:09",
+    "count": 3
+  },
+  "0xEC5A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:13",
+    "count": 7
+  },
+  "0x7CE3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:22",
+    "count": 3
+  },
+  "0xAD37": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:32",
+    "count": 9
+  },
+  "0xED4B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:33",
+    "count": 4
+  },
+  "0xFC9B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:37",
+    "count": 3
+  },
+  "0xFE9D": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:04:49",
+    "count": 2
+  },
+  "0xEDDB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:04:56",
+    "count": 6
+  },
+  "0xFEED": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:02",
+    "count": 1
+  },
+  "0xCE5A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:11",
+    "count": 3
+  },
+  "0xCDB9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:12",
+    "count": 3
+  },
+  "0xBE99": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:13",
+    "count": 1
+  },
+  "0xDE6B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:14",
+    "count": 3
+  },
+  "0xCD89": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:16",
+    "count": 6
+  },
+  "0x7D54": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:18",
+    "count": 16
+  },
+  "0x7EC5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:19",
+    "count": 1
+  },
+  "0xBE49": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:21",
+    "count": 3
+  },
+  "0xCDA9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:32",
+    "count": 1
+  },
+  "0x5D22": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:33",
+    "count": 4
+  },
+  "0x8D75": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:37",
+    "count": 6
+  },
+  "0x7DB4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:39",
+    "count": 6
+  },
+  "0x8D55": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:41",
+    "count": 8
+  },
+  "0x7DE4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:44",
+    "count": 3
+  },
+  "0x6D93": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:45",
+    "count": 3
+  },
+  "0x7DD4": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:05:48",
+    "count": 2
+  },
+  "0x9DE6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:52",
+    "count": 2
+  },
+  "0x8DB5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:53",
+    "count": 4
+  },
+  "0x8E86": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:56",
+    "count": 1
+  },
+  "0x8EC6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:57",
+    "count": 1
+  },
+  "0x8EB6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:05:58",
+    "count": 3
+  },
+  "0xDE4B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:00",
+    "count": 5
+  },
+  "0xDEDB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:02",
+    "count": 1
+  },
+  "0xEC6A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:03",
+    "count": 5
+  },
+  "0xEE7C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:04",
+    "count": 3
+  },
+  "0x8D35": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:07",
+    "count": 12
+  },
+  "0x1D2E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:15",
+    "count": 4
+  },
+  "0x5D42": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:16",
+    "count": 8
+  },
+  "0x3DD0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:18",
+    "count": 3
+  },
+  "0x1D7E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:19",
+    "count": 5
+  },
+  "0x2DAF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:21",
+    "count": 6
+  },
+  "0x3D80": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:22",
+    "count": 3
+  },
+  "0x2D8F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:23",
+    "count": 4
+  },
+  "0x2DCF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:24",
+    "count": 3
+  },
+  "0xAB85": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:35",
+    "count": 1
+  },
+  "0x1C6D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:06:46",
+    "count": 6
+  },
+  "0x1C9D": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:06:49",
+    "count": 9
+  },
+  "0xBC67": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:02",
+    "count": 7
+  },
+  "0x4C20": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:03",
+    "count": 5
+  },
+  "0x2C8E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:08",
+    "count": 7
+  },
+  "0x2C4E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:16",
+    "count": 6
+  },
+  "0x1C8D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:19",
+    "count": 7
+  },
+  "0x1CED": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:24",
+    "count": 13
+  },
+  "0x0BAB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:28",
+    "count": 3
+  },
+  "0x2ACC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:44",
+    "count": 1
+  },
+  "0x0A8A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:07:46",
+    "count": 2
+  },
+  "0x1C2D": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:08:03",
+    "count": 10
+  },
+  "0x2C9E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:22",
+    "count": 11
+  },
+  "0xEB49": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:31",
+    "count": 1
+  },
+  "0x6D43": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:38",
+    "count": 11
+  },
+  "0xEC8A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:40",
+    "count": 6
+  },
+  "0xEECC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:46",
+    "count": 2
+  },
+  "0xEC7A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:49",
+    "count": 6
+  },
+  "0xBC77": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:08:53",
+    "count": 10
+  },
+  "0xDECB": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:09:14",
+    "count": 2
+  },
+  "0xEE9C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:17",
+    "count": 3
+  },
+  "0xDDBA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:22",
+    "count": 7
+  },
+  "0x6D53": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:27",
+    "count": 9
+  },
+  "0xEEEC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:33",
+    "count": 1
+  },
+  "0x7D34": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:38",
+    "count": 6
+  },
+  "0x7DC4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:39",
+    "count": 3
+  },
+  "0x8D95": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:40",
+    "count": 2
+  },
+  "0x6D63": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:44",
+    "count": 5
+  },
+  "0xBD38": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:45",
+    "count": 10
+  },
+  "0x8D45": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:46",
+    "count": 10
+  },
+  "0x7E55": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:51",
+    "count": 2
+  },
+  "0x6E64": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:53",
+    "count": 2
+  },
+  "0x7E85": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:55",
+    "count": 1
+  },
+  "0x7E95": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:57",
+    "count": 1
+  },
+  "0x7EE5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:09:58",
+    "count": 1
+  },
+  "0x7EA5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:00",
+    "count": 1
+  },
+  "0x7EB5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:01",
+    "count": 1
+  },
+  "0x7ED5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:03",
+    "count": 1
+  },
+  "0x8E56": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:05",
+    "count": 1
+  },
+  "0x9EC7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:06",
+    "count": 1
+  },
+  "0x9ED7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:07",
+    "count": 1
+  },
+  "0x7E65": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:08",
+    "count": 2
+  },
+  "0xDE2B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:10",
+    "count": 3
+  },
+  "0xEEAC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:11",
+    "count": 5
+  },
+  "0xDE9B": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:10:13",
+    "count": 2
+  },
+  "0xCD79": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:18",
+    "count": 4
+  },
+  "0x8CD4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:28",
+    "count": 2
+  },
+  "0x1C5D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:35",
+    "count": 3
+  },
+  "0xAD27": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:36",
+    "count": 7
+  },
+  "0x6D23": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:39",
+    "count": 3
+  },
+  "0xEC1A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:51",
+    "count": 2
+  },
+  "0x4C10": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:52",
+    "count": 1
+  },
+  "0x0C8C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:10:56",
+    "count": 7
+  },
+  "0xBB96": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:01",
+    "count": 2
+  },
+  "0x3CCF": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:11:21",
+    "count": 1
+  },
+  "0x1CAD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:27",
+    "count": 6
+  },
+  "0x5C81": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:47",
+    "count": 5
+  },
+  "0x4D71": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:53",
+    "count": 5
+  },
+  "0xDB88": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:57",
+    "count": 1
+  },
+  "0xDCC9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:58",
+    "count": 4
+  },
+  "0xDCD9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:11:59",
+    "count": 4
+  },
+  "0xECDA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:07",
+    "count": 3
+  },
+  "0xEE6C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:10",
+    "count": 5
+  },
+  "0xDC39": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:12:30",
+    "count": 2
+  },
+  "0x7D24": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:36",
+    "count": 5
+  },
+  "0x4D41": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:37",
+    "count": 7
+  },
+  "0x3D70": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:38",
+    "count": 5
+  },
+  "0x4D81": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:39",
+    "count": 2
+  },
+  "0x3DC0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:40",
+    "count": 3
+  },
+  "0xAE78": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:43",
+    "count": 2
+  },
+  "0x2D9F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:49",
+    "count": 8
+  },
+  "0x2DDF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:51",
+    "count": 7
+  },
+  "0x2ED0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:52",
+    "count": 1
+  },
+  "0x8E26": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:53",
+    "count": 1
+  },
+  "0x3E91": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:55",
+    "count": 1
+  },
+  "0x1E6F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:56",
+    "count": 1
+  },
+  "0xCE1A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:12:58",
+    "count": 1
+  },
+  "0x5D52": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:13:00",
+    "count": 2
+  },
+  "0x1D3E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:13:05",
+    "count": 4
+  },
+  "0x1DCE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:13:06",
+    "count": 3
+  },
+  "0x3E51": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:13:10",
+    "count": 1
+  },
+  "0xEE4C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:13:13",
+    "count": 4
+  },
+  "0x4BAF": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:13:42",
+    "count": 1
+  },
+  "0x1C4D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:13:55",
+    "count": 5
+  },
+  "0x1CBD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:14:33",
+    "count": 9
+  },
+  "0x6CA2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:14:40",
+    "count": 5
+  },
+  "0x8B23": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:14:50",
+    "count": 2
+  },
+  "0xED6B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:14:54",
+    "count": 5
+  },
+  "0xBD78": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:15:18",
+    "count": 9
+  },
+  "0xBDC8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:15:19",
+    "count": 2
+  },
+  "0x6C22": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:15:23",
+    "count": 4
+  },
+  "0x9AB3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:15:36",
+    "count": 1
+  },
+  "0xBBA6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:15:42",
+    "count": 1
+  },
+  "0x7BB2": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:15:54",
+    "count": 1
+  },
+  "0xDB68": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:00",
+    "count": 1
+  },
+  "0xEB99": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:01",
+    "count": 2
+  },
+  "0x4B1F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:02",
+    "count": 1
+  },
+  "0xCC48": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:09",
+    "count": 4
+  },
+  "0x9CB5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:11",
+    "count": 3
+  },
+  "0x6DD3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:29",
+    "count": 6
+  },
+  "0x9D56": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:16:30",
+    "count": 12
+  },
+  "0xBCD7": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:16:55",
+    "count": 2
+  },
+  "0xEC4A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:00",
+    "count": 5
+  },
+  "0xFCCB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:02",
+    "count": 2
+  },
+  "0xFCEB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:03",
+    "count": 4
+  },
+  "0xFCDB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:05",
+    "count": 3
+  },
+  "0xECBA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:06",
+    "count": 2
+  },
+  "0xCD39": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:15",
+    "count": 7
+  },
+  "0x6DB3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:34",
+    "count": 3
+  },
+  "0xAE68": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:37",
+    "count": 2
+  },
+  "0xAEB8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:17:38",
+    "count": 1
+  },
+  "0xDCB9": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:18:01",
+    "count": 2
+  },
+  "0xADC7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:08",
+    "count": 1
+  },
+  "0xCE3A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:15",
+    "count": 4
+  },
+  "0xDE5B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:18",
+    "count": 4
+  },
+  "0x8C24": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:22",
+    "count": 5
+  },
+  "0xDC59": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:36",
+    "count": 5
+  },
+  "0x2D3F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:48",
+    "count": 5
+  },
+  "0xADA7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:18:59",
+    "count": 5
+  },
+  "0x9E57": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:19:02",
+    "count": 1
+  },
+  "0x9DA6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:07",
+    "count": 4
+  },
+  "0x5D32": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:08",
+    "count": 3
+  },
+  "0xFEAD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:21",
+    "count": 2
+  },
+  "0xFD9C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:23",
+    "count": 2
+  },
+  "0xCCB8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:30",
+    "count": 2
+  },
+  "0x4CD0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:42",
+    "count": 4
+  },
+  "0xBC97": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:19:54",
+    "count": 2
+  },
+  "0xADB7": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:20:02",
+    "count": 4
+  },
+  "0xDDCA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:20:06",
+    "count": 3
+  },
+  "0xFE4D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:20:15",
+    "count": 1
+  },
+  "0x5CD1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:20:23",
+    "count": 2
+  },
+  "0x3D50": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:20:28",
+    "count": 6
+  },
+  "0x6DA3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:20:36",
+    "count": 4
+  },
+  "0x7DA4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:20:37",
+    "count": 6
+  },
+  "0xBD28": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:21:15",
+    "count": 1
+  },
+  "0xFC4B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:16",
+    "count": 1
+  },
+  "0x5E53": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:32",
+    "count": 1
+  },
+  "0x4DC1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:36",
+    "count": 1
+  },
+  "0x6E54": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:37",
+    "count": 2
+  },
+  "0xCE2A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:44",
+    "count": 4
+  },
+  "0xCEDA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:46",
+    "count": 2
+  },
+  "0x1D1E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:47",
+    "count": 1
+  },
+  "0x0D9D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:48",
+    "count": 1
+  },
+  "0x9E27": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:49",
+    "count": 1
+  },
+  "0x0D5D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:52",
+    "count": 2
+  },
+  "0x0DBD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:53",
+    "count": 2
+  },
+  "0x0DDD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:54",
+    "count": 6
+  },
+  "0x0DCD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:21:55",
+    "count": 3
+  },
+  "0x1D4E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:01",
+    "count": 3
+  },
+  "0x1EAF": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:02",
+    "count": 1
+  },
+  "0x0ECE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:03",
+    "count": 1
+  },
+  "0x5E33": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:04",
+    "count": 1
+  },
+  "0xDDAA": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:22:25",
+    "count": 4
+  },
+  "0xBCC7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:32",
+    "count": 2
+  },
+  "0x9A53": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:33",
+    "count": 1
+  },
+  "0x6A50": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:34",
+    "count": 1
+  },
+  "0x9BE4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:41",
+    "count": 1
+  },
+  "0xCCC8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:54",
+    "count": 1
+  },
+  "0xCCE8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:56",
+    "count": 1
+  },
+  "0xCCD8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:57",
+    "count": 1
+  },
+  "0xCBC7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:22:58",
+    "count": 1
+  },
+  "0x4DE1": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:23:27",
+    "count": 1
+  },
+  "0x0D3D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:23:30",
+    "count": 1
+  },
+  "0x1DAE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:23:31",
+    "count": 3
+  },
+  "0x1DBE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:23:32",
+    "count": 1
+  },
+  "0x3BBE": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:24:39",
+    "count": 2
+  },
+  "0xDDDA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:08",
+    "count": 3
+  },
+  "0xBE39": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:15",
+    "count": 1
+  },
+  "0xCE4A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:19",
+    "count": 1
+  },
+  "0xACD6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:29",
+    "count": 4
+  },
+  "0xACC6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:30",
+    "count": 2
+  },
+  "0xACB6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:31",
+    "count": 2
+  },
+  "0xBCE7": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:25:43",
+    "count": 1
+  },
+  "0xCCA8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:25:54",
+    "count": 1
+  },
+  "0x6CB2": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:26:47",
+    "count": 2
+  },
+  "0x9C75": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:27:08",
+    "count": 2
+  },
+  "0x8DD5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:27:25",
+    "count": 1
+  },
+  "0xECCA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:27:33",
+    "count": 3
+  },
+  "0xFD5C": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:28:05",
+    "count": 2
+  },
+  "0x8E46": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:08",
+    "count": 2
+  },
+  "0x9E37": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:12",
+    "count": 2
+  },
+  "0xEE3C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:14",
+    "count": 1
+  },
+  "0xDEBB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:18",
+    "count": 2
+  },
+  "0xCE9A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:21",
+    "count": 2
+  },
+  "0xEEDC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:25",
+    "count": 2
+  },
+  "0xDCA9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:28:34",
+    "count": 2
+  },
+  "0x5D82": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:29:29",
+    "count": 3
+  },
+  "0xCB87": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:29:31",
+    "count": 1
+  },
+  "0x7D94": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:29:50",
+    "count": 3
+  },
+  "0x9D76": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:29:56",
+    "count": 5
+  },
+  "0x3DB0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:30:01",
+    "count": 3
+  },
+  "0x0C4C": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:30:46",
+    "count": 1
+  },
+  "0x8DC5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:31:07",
+    "count": 2
+  },
+  "0x7D84": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:31:12",
+    "count": 5
+  },
+  "0xFE6D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:31:40",
+    "count": 1
+  },
+  "0x5E83": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:32:18",
+    "count": 1
+  },
+  "0x6DE3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:32:58",
+    "count": 3
+  },
+  "0xCD29": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:33:19",
+    "count": 5
+  },
+  "0x4D91": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:34:49",
+    "count": 2
+  },
+  "0xACE6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:34:59",
+    "count": 1
+  },
+  "0x9E87": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:35:16",
+    "count": 1
+  },
+  "0x0CAC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:35:43",
+    "count": 2
+  },
+  "0xAE98": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:35:56",
+    "count": 1
+  },
+  "0x4E42": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:36:15",
+    "count": 1
+  },
+  "0xBC17": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:36:33",
+    "count": 1
+  },
+  "0x9D26": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:36:44",
+    "count": 2
+  },
+  "0x1D9E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:36:46",
+    "count": 3
+  },
+  "0xBE69": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:36:56",
+    "count": 1
+  },
+  "0xCE8A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:37:03",
+    "count": 1
+  },
+  "0x0DED": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:37:07",
+    "count": 1
+  },
+  "0x0B2B": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:37:56",
+    "count": 1
+  },
+  "0x0B6B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:37:58",
+    "count": 2
+  },
+  "0x7E25": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:11",
+    "count": 1
+  },
+  "0x6E94": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:13",
+    "count": 1
+  },
+  "0xEE2C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:14",
+    "count": 1
+  },
+  "0xFD3C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:45",
+    "count": 1
+  },
+  "0xCEAA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:50",
+    "count": 1
+  },
+  "0x0D8D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:54",
+    "count": 1
+  },
+  "0x1D8E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:38:55",
+    "count": 2
+  },
+  "0x6E74": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:39:18",
+    "count": 1
+  },
+  "0x0C6C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:39:46",
+    "count": 2
+  },
+  "0x0CCC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:39:51",
+    "count": 4
+  },
+  "0x2D4F": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:40:28",
+    "count": 2
+  },
+  "0x0D6D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:40:31",
+    "count": 1
+  },
+  "0x1DDE": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:40:36",
+    "count": 4
+  },
+  "0x0D2D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:40:41",
+    "count": 1
+  },
+  "0x3B7E": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:41:50",
+    "count": 2
+  },
+  "0x0BDB": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:42:10",
+    "count": 5
+  },
+  "0x7A51": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:42:43",
+    "count": 1
+  },
+  "0x6BD1": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:43:02",
+    "count": 3
+  },
+  "0x6E24": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:43:16",
+    "count": 1
+  },
+  "0x4D11": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:43:27",
+    "count": 1
+  },
+  "0x1B5C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:43:37",
+    "count": 1
+  },
+  "0x4E62": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:44:18",
+    "count": 1
+  },
+  "0xCDC9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:21",
+    "count": 3
+  },
+  "0xAE58": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:33",
+    "count": 2
+  },
+  "0xEEBC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:39",
+    "count": 1
+  },
+  "0xCE6A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:40",
+    "count": 2
+  },
+  "0x5E43": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:44",
+    "count": 1
+  },
+  "0x5EA3": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:45",
+    "count": 1
+  },
+  "0xFE3D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:54",
+    "count": 1
+  },
+  "0xBEE9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:44:57",
+    "count": 1
+  },
+  "0xAE48": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:45:00",
+    "count": 2
+  },
+  "0x2D6F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:45:03",
+    "count": 2
+  },
+  "0xEE1C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:45:05",
+    "count": 1
+  },
+  "0x2C1E": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:45:09",
+    "count": 1
+  },
+  "0xADD7": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:45:50",
+    "count": 2
+  },
+  "0x5DD2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:46:10",
+    "count": 1
+  },
+  "0x5E73": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:46:16",
+    "count": 1
+  },
+  "0x4D31": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:46:28",
+    "count": 1
+  },
+  "0x0D4D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:46:30",
+    "count": 1
+  },
+  "0x3DE0": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:46:38",
+    "count": 1
+  },
+  "0x2D7F": {
+    "meaning": "응답 없음",
+    "first_seen": "2025-12-17 10:46:52",
+    "count": 1
+  },
+  "0x4DD1": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:46:54",
+    "count": 1
+  },
+  "0x2D5F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:03",
+    "count": 1
+  },
+  "0xBA25": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:14",
+    "count": 1
+  },
+  "0x8A92": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:16",
+    "count": 1
+  },
+  "0x7920": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:26",
+    "count": 1
+  },
+  "0x6A90": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:27",
+    "count": 1
+  },
+  "0xAA44": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:28",
+    "count": 1
+  },
+  "0xAAD4": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:29",
+    "count": 1
+  },
+  "0x9A73": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:30",
+    "count": 1
+  },
+  "0x9A93": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:32",
+    "count": 1
+  },
+  "0xAA94": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:33",
+    "count": 1
+  },
+  "0x3A2D": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:34",
+    "count": 1
+  },
+  "0x2A6C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:47:39",
+    "count": 1
+  },
+  "0x5DB2": {
+    "meaning": "서버 오류 (404)",
+    "first_seen": "2025-12-17 10:48:36",
+    "count": 2
+  },
+  "0x4DB1": {
+    "meaning": "서버 오류 (404)",
+    "first_seen": "2025-12-17 10:49:43",
+    "count": 1
+  },
+  "0x8E36": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:50:19",
+    "count": 1
+  },
+  "0xCDD9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:50:30",
+    "count": 1
+  },
+  "0xCECA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:50:31",
+    "count": 1
+  },
+  "0x7E35": {
+    "meaning": "서버 오류 (404)",
+    "first_seen": "2025-12-17 10:50:45",
+    "count": 1
+  },
+  "0x0CFC": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:51:40",
+    "count": 1
+  },
+  "0xAA54": {
+    "meaning": "서버 오류 (404)",
+    "first_seen": "2025-12-17 10:52:17",
+    "count": 1
+  },
+  "0xCA86": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:52:19",
+    "count": 1
+  },
+  "0xFECD": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:52:26",
+    "count": 1
+  },
+  "0xBDB8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:52:47",
+    "count": 2
+  },
+  "0xFD8C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:13",
+    "count": 1
+  },
+  "0x0626": {
+    "meaning": "서버 오류 (404)",
+    "first_seen": "2025-12-17 10:53:29",
+    "count": 1
+  },
+  "0x662C": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:30",
+    "count": 1
+  },
+  "0xB631": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:31",
+    "count": 1
+  },
+  "0xC783": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:33",
+    "count": 1
+  },
+  "0xB772": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:35",
+    "count": 1
+  },
+  "0xF746": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:36",
+    "count": 2
+  },
+  "0xE7C5": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:38",
+    "count": 1
+  },
+  "0xB742": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:39",
+    "count": 1
+  },
+  "0xB7B2": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:41",
+    "count": 1
+  },
+  "0xE896": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:44",
+    "count": 1
+  },
+  "0xE8A6": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:46",
+    "count": 1
+  },
+  "0xF9A8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:47",
+    "count": 1
+  },
+  "0xF9E8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:49",
+    "count": 1
+  },
+  "0xF9D8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:51",
+    "count": 1
+  },
+  "0xF9C8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:53",
+    "count": 1
+  },
+  "0xFAC9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:56",
+    "count": 4
+  },
+  "0xFAE9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:58",
+    "count": 3
+  },
+  "0xFAF9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:53:59",
+    "count": 1
+  },
+  "0xFAD9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:01",
+    "count": 2
+  },
+  "0xFAB9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:08",
+    "count": 1
+  },
+  "0xEAD8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:14",
+    "count": 1
+  },
+  "0xDA77": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:17",
+    "count": 1
+  },
+  "0xDAB7": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:18",
+    "count": 1
+  },
+  "0xEA68": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:20",
+    "count": 1
+  },
+  "0xEBA9": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:21",
+    "count": 1
+  },
+  "0xDBA8": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:24",
+    "count": 1
+  },
+  "0xFB8A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:27",
+    "count": 1
+  },
+  "0xEBD9": {
+    "meaning": "서버 오류 (404)",
+    "first_seen": "2025-12-17 10:54:30",
+    "count": 1
+  },
+  "0xFBDA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:31",
+    "count": 2
+  },
+  "0xFBCA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:34",
+    "count": 1
+  },
+  "0xECEA": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:45",
+    "count": 1
+  },
+  "0x8A62": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:53",
+    "count": 1
+  },
+  "0x0A2A": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:54",
+    "count": 1
+  },
+  "0x5A9F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:58",
+    "count": 1
+  },
+  "0x7A71": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:54:59",
+    "count": 1
+  },
+  "0x5A5F": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:55:00",
+    "count": 1
+  },
+  "0xEB29": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:55:05",
+    "count": 1
+  },
+  "0xDB98": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:55:06",
+    "count": 1
+  },
+  "0xFC7B": {
+    "meaning": "New Pattern (Learning Cooldown)",
+    "first_seen": "2025-12-17 10:55:08",
+    "count": 1
+  }
+}

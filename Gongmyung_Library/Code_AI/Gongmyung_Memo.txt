@@ -1,0 +1,174 @@
+[2025-12-13 07:54:06]
+● 감각 (Input) : {"cpu": 50}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-13 08:08:07]
+● 감각 (Input) : {"cpu": 31, "ram": 66, "network": "Slow"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-13 08:08:15]
+● 감각 (Input) : {"cpu": 95, "ram": 52, "network": "Disconnected"}
+○ 판단 (Logic) : Critical Load (Unstable)
+◎ 행동 (Action): Alert & Optimize
+⇒ 결과 (Result): Cycle Complete. State: Critical Load (Unstable)
+----------------------------------------
+[2025-12-13 08:35:52]
+● 감각 (Input) : {"cpu": 71, "ram": 59, "network": "Connected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-13 08:37:00]
+● 감각 (Input) : {"cpu": 64, "ram": 56, "network": "Disconnected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-13 08:37:06]
+● 감각 (Input) : {"cpu": 24, "ram": 51, "network": "Connected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-13 08:37:07]
+● 감각 (Input) : {"cpu": 94, "ram": 62, "network": "Slow"}
+○ 판단 (Logic) : Critical Load (Unstable)
+◎ 행동 (Action): Alert & Optimize
+⇒ 결과 (Result): Cycle Complete. State: Critical Load (Unstable)
+----------------------------------------
+[2025-12-13 08:37:16]
+● 감각 (Input) : {"cpu": 32, "ram": 31, "network": "Slow"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-13 08:37:31]
+● 감각 (Input) : {"cpu": 12, "ram": 80, "network": "Connected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-13 08:38:07]
+● 감각 (Input) : {"cpu": 91, "ram": 42, "network": "Disconnected"}
+○ 판단 (Logic) : Critical Load (Unstable)
+◎ 행동 (Action): Alert & Optimize
+⇒ 결과 (Result): Cycle Complete. State: Critical Load (Unstable)
+----------------------------------------
+[2025-12-13 08:38:07]
+● 감각 (Input) : {"cpu": 14, "ram": 61, "network": "Connected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-13 10:21:40]
+● 감각 (Input) : {"cpu": 65, "ram": 53, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 00:23:32]
+● 감각 (Input) : {"cpu": 32, "ram": 27, "network": "Disconnected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-14 00:23:43]
+● 감각 (Input) : {"cpu": 80, "ram": 78, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 00:27:39]
+● 감각 (Input) : {"cpu": 77, "ram": 77, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 00:37:20]
+● 감각 (Input) : {"cpu": 18, "ram": 69, "network": "Connected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-14 00:37:22]
+● 감각 (Input) : {"cpu": 67, "ram": 29, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 01:01:59]
+● 감각 (Input) : {"cpu": 67, "ram": 45, "network": "Connected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 01:05:21]
+● 감각 (Input) : {"cpu": 52, "ram": 45, "network": "Disconnected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 01:07:42]
+● 감각 (Input) : {"cpu": 75, "ram": 28, "network": "Connected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 01:28:08]
+● 감각 (Input) : {"cpu": 45, "ram": 36, "network": "Connected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-14 02:04:29]
+● 감각 (Input) : {"cpu": 62, "ram": 31, "network": "Connected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 02:04:35]
+● 감각 (Input) : {"cpu": 57, "ram": 53, "network": "Disconnected"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 02:04:36]
+● 감각 (Input) : {"cpu": 51, "ram": 48, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 02:16:06]
+● 감각 (Input) : {"cpu": 36, "ram": 41, "network": "Disconnected"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-14 03:30:51]
+● 감각 (Input) : {"cpu": 94, "ram": 58, "network": "Slow"}
+○ 판단 (Logic) : Critical Load (Unstable)
+◎ 행동 (Action): Alert & Optimize
+⇒ 결과 (Result): Cycle Complete. State: Critical Load (Unstable)
+----------------------------------------
+[2025-12-14 04:11:36]
+● 감각 (Input) : {"cpu": 12, "ram": 23, "network": "Slow"}
+○ 판단 (Logic) : Stable State
+◎ 행동 (Action): Maintain Monitoring
+⇒ 결과 (Result): Cycle Complete. State: Stable State
+----------------------------------------
+[2025-12-14 04:11:38]
+● 감각 (Input) : {"cpu": 62, "ram": 46, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------
+[2025-12-14 04:11:39]
+● 감각 (Input) : {"cpu": 63, "ram": 54, "network": "Slow"}
+○ 판단 (Logic) : High Load (Caution)
+◎ 행동 (Action): Analyze Resource Usage
+⇒ 결과 (Result): Cycle Complete. State: High Load (Caution)
+----------------------------------------

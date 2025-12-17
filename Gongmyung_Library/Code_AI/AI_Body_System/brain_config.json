@@ -1,0 +1,15 @@
+{
+    "brain_mode": "api", 
+    "api_keys": {
+        "gemini": "AIzaSyDb9TzuQejfrJEympQBqLpTBP679syBAqg",
+        "openai": ""
+    },
+    "browser_settings": {
+        "auto_open": true,
+        "browser_path": "default"
+    },
+    "system_settings": {
+        "auto_ask_unknown": true,
+        "log_level": "INFO"
+    }
+}

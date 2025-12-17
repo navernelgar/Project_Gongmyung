@@ -1,0 +1,66 @@
+# 🖥️ Full System Analysis Report (C:, D:, E:)
+Date: 2025-12-08
+Analyzer: GitHub Copilot
+
+## 1. 🌐 Executive Summary
+The user's workspace is distributed across three drives, each serving a distinct purpose in the digital ecosystem.
+- **C: (System)**: The OS host, actively managed and optimized to prevent bloat.
+- **D: (Library)**: The "Sanctuary" hosting the *Gongmyung Library* project (Philosophy/Code).
+- **E: (Workshop)**: The "Engine Room" containing development tools, maintenance scripts, and mass data storage.
+
+## 2. 🛠️ Drive E: The Workshop & Utility Belt
+**Role:** Active Development, System Maintenance, Data Processing.
+
+### 📂 Key Directories
+- **`E:\Dev`**: The main coding workspace.
+  - `AI_body_system`, `ai-collaborator`: AI-related projects.
+  - `Gongmyung_Debug_Ship`: Likely a testing ground for the main library.
+  - `EpicGames`, `Unity`: Game development engines moved here to save C: space.
+- **`E:\Apps`, `E:\Data`, `E:\Models`**: Structured storage defined by `organize_e_drive.ps1`.
+
+### 📜 Automation Scripts (PowerShell)
+The user employs advanced PowerShell scripts to manage disk space and folder structures.
+- **`organize_e_drive.ps1`**: Enforces a clean directory structure on E:.
+- **`move_apps.ps1` / `optimize_c_drive_admin.ps1`**: 
+  - **Function**: Moves heavy folders (Unity, Epic Games) from C: to E:.
+  - **Technique**: Uses **Junction Points** (Symbolic Links) so the OS still thinks files are on C:, preventing breakage.
+  - **Insight**: The user is power-user savvy, prioritizing C: drive health.
+
+### 🐍 Data Analysis (Python)
+- **`parse_chat_v2.py` / `temp_parse_chat.py`**:
+  - **Function**: Parses large JSON chat logs (likely LLM conversation history).
+  - **Workflow**: Batch processing (e.g., turns 1-20, 21-40) suggests handling massive datasets.
+
+## 3. 📚 Drive D: The Sanctuary (Gongmyung Library)
+**Role:** Intellectual Property & Philosophical Core.
+
+### 🏛️ Gongmyung Library
+- **Concept**: A "Resonance Library" blending code, philosophy, and economics.
+- **Tech**: Custom Node.js server (No Express), File-system based routing.
+- **Key Features**:
+  - **`@flow` System**: Narrative code annotations.
+  - **Gatekeeper**: Custom auth system.
+  - **Underworld**: Economic model (Energy = Labor).
+  *(See `Project_Analysis_Report.txt` for full details)*
+
+## 4. ⚙️ Drive C: The Engine Room
+**Role:** Windows OS & User Profile.
+
+- **Status**: Actively kept lean.
+- **User Profile**: `C:\Users\Owner` (Inferred from script paths).
+- **Integration**: Many "Program Files" are physically located on E: but logically linked here.
+
+## 5. 🤖 AI Agent Guidelines for this Workspace
+
+### Navigation
+- **Development**: Look in `E:\Dev` for active coding projects.
+- **Reference**: Look in `D:\Gongmyung_Library` for core philosophy and patterns.
+- **Maintenance**: Use scripts in `E:\` root for system tasks.
+
+### Coding Style
+- **PowerShell**: When writing system scripts, follow the pattern of `move_apps.ps1` (Error checking, `Test-Path`, Junction points).
+- **Python**: For data tasks, assume JSON input and batch processing patterns.
+- **Node.js**: In `D:\`, adhere strictly to the `@flow` narrative style.
+
+### Caution
+- **Junction Points**: Be careful when deleting folders on C: or E:. Ensure you are not breaking a Junction link that the OS relies on.

@@ -1,0 +1,13 @@
+{
+    "system_name": "Gongmyung AI Body",
+    "version": "1.0.0",
+    "storage_path": "D:/Project_Gongmyung/Gongmyung_Library/Code_AI/AI_Body_System/Memory_Logs",
+    "thresholds": {
+        "resonance_stable": 0.8,
+        "resonance_unstable": 0.4,
+        "cpu_surge": 10.0,
+        "ram_surge": 5.0
+    },
+    "monitor_interval": 1.0,
+    "log_retention_days": 7
+}

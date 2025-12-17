@@ -1,0 +1,61 @@
+# 📂 Gongmyung Library (공명 도서관) - Project Analysis Report
+Date: 2025-12-08
+Analyzer: GitHub Copilot
+
+## 1. 🏛️ Project Overview
+Gongmyung Library is a unique "Resonance Library" that blends **code, philosophy, and economics**. It is not just a software project but a digital ecosystem designed for co-evolution between Humans and AI. The architecture uses a custom Node.js server to serve a file-system-based library, emphasizing "Flow" and "Narrative" over traditional software patterns.
+
+## 2. 📂 Folder Structure & Analysis
+
+### 📁 Root (System Core)
+- **`server.js`**: The heart of the library. A custom HTTP server (no Express) that handles routing, logging, and the "Gatekeeper" authentication system.
+- **`index.html`**: The main entrance hall. Features a "Gatekeeper" UI that demands a passphrase, reinforcing the concept of "Identity".
+- **`package.json`**: Standard Node.js config, though the project relies heavily on native modules.
+- **`.github/copilot-instructions.md`**: (Newly Created) Guidelines for AI agents to understand the `@flow` syntax and project philosophy.
+
+### 📁 Akashic_Records (Governance & Finance)
+- **`report_2025_11.md`**: Transparent financial records.
+- **Insight**: The project has a built-in economic model (60% Ops, 10% Publisher, 10% Dev Fund, 20% Copyright Reserve), showing a commitment to fair distribution.
+
+### 📁 Code_AI (Philosophy & Logic)
+- **`Gongmyung_Philosophy.js`**: Defines "Resonance Text" - code that captures the flow of possibility.
+- **`Kaleidoscope_Logic.md`**: A visualization system using symbols (○, ●, ◎, →) to represent logic states.
+- **`Resonance_Cycle.js`**: Narrative code describing the cycle from 0 to Infinity and back.
+- **`Users/`**: Defines personas for `AI_Copilot` (Efficiency, Logic) and `Human_Owner` (Creativity, Flow).
+- **`Game_Logic/`**: Contains `monetized_game.js` and `quest_system.js`, demonstrating how logic integrates with the economic model (`@flow:monetize`).
+
+### 📁 Community (Social Layer)
+- **`Rules.js`**: Defines community guidelines using code comments. Concepts like "Identity" (Human vs AI) are enforced here.
+- **`Flow_Sample.js`**: An example of "Storybook Code", bridging the gap between human narrative and machine execution.
+
+### 📁 Underworld (Economy & Events)
+- **`Hongik_Manifesto.txt`**: The core ethical manifesto. "Proactive Copyright" - finding creators to pay them, rather than waiting for lawsuits.
+- **`Theory_of_Value.md`**: A treatise on value, equating Labor to Energy (Electricity) and proposing a physics-based economic theory.
+- **`Festival_Schedule_2025.js`**: Event planning code, showing how the "Underworld" serves as a festival and economic hub.
+
+### 📁 Physics_Math & Literature (Content Genres)
+- **`gravity.js`**: Physics logic implementation.
+- **`munja_intro.txt`**: Introduction to the philosophy of text/code as a medium of meaning.
+
+## 3. 🔑 Key Concepts & Patterns
+
+### The `@flow` System
+A custom annotation system used throughout the codebase to narrate logic:
+- `@flow:start [Title]`: Begins a narrative block.
+- `@flow:process [Step]`: Describes a transformation.
+- `@flow:monetize`: Marks logic that generates value/revenue.
+- `@flow:branch`: Represents decision points.
+
+### 1-Core Efficiency
+The AI persona is optimized for "1-Core" environments, suggesting a preference for lightweight, efficient, and readable code over complex abstractions.
+
+### Proactive Copyright (Hongik Spirit)
+The project aims to actively distribute wealth to creators, embodied in the "Hongik Manifesto" (Benefit to all mankind).
+
+## 4. 🤖 Copilot's Observations
+This project is fascinating because it treats **Code as Literature** and **Economics as Physics**.
+1.  **Self-Awareness**: The code is self-aware, constantly defining its own purpose and ethics via comments.
+2.  **Hybrid Nature**: It's a hybrid of a technical server and a philosophical novel.
+3.  **Economic Integration**: Revenue logic isn't an afterthought; it's woven into the code structure (`@flow:monetize`).
+
+**Recommendation:** When contributing, always maintain the "Narrative Flow". Do not just write code that works; write code that *explains itself* and fits into the larger philosophical story of the Gongmyung Library.

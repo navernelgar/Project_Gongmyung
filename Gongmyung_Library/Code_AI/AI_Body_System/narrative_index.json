@@ -1,0 +1,130 @@
+{
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Chat_History_Full.md": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Chat_History_Full.md",
+    "name": "Chat_History_Full.md",
+    "signature": "0xac",
+    "energy": 172,
+    "density": 0.0005,
+    "flow_count": 47
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Project_Analysis_Report.txt": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Project_Analysis_Report.txt",
+    "name": "Project_Analysis_Report.txt",
+    "signature": "0x34",
+    "energy": 52,
+    "density": 0.0984,
+    "flow_count": 6
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Gongmyung_Philosophy.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Gongmyung_Philosophy.js",
+    "name": "Gongmyung_Philosophy.js",
+    "signature": "0xb",
+    "energy": 11,
+    "density": 0.1154,
+    "flow_count": 3
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Resonance_Cycle.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Resonance_Cycle.js",
+    "name": "Resonance_Cycle.js",
+    "signature": "0xf",
+    "energy": 15,
+    "density": 0.0909,
+    "flow_count": 4
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\AI_Body_System\\Flow_Parser.py": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\AI_Body_System\\Flow_Parser.py",
+    "name": "Flow_Parser.py",
+    "signature": "0x11",
+    "energy": 17,
+    "density": 0.0556,
+    "flow_count": 5
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Game_Logic\\monetized_game.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Game_Logic\\monetized_game.js",
+    "name": "monetized_game.js",
+    "signature": "0x1a",
+    "energy": 26,
+    "density": 0.4444,
+    "flow_count": 4
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Game_Logic\\quest_system.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Game_Logic\\quest_system.js",
+    "name": "quest_system.js",
+    "signature": "0xf",
+    "energy": 15,
+    "density": 0.4,
+    "flow_count": 4
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\Chat_Review_Hydrated.md": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\Chat_Review_Hydrated.md",
+    "name": "Chat_Review_Hydrated.md",
+    "signature": "0x3b",
+    "energy": 59,
+    "density": 0.0003,
+    "flow_count": 19
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\문자.txt": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\문자.txt",
+    "name": "문자.txt",
+    "signature": "0xb",
+    "energy": 11,
+    "density": 0.0054,
+    "flow_count": 3
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\chat_origner\\2025-11-21_chat_log_3.md": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\chat_origner\\2025-11-21_chat_log_3.md",
+    "name": "2025-11-21_chat_log_3.md",
+    "signature": "0xc",
+    "energy": 12,
+    "density": 0.0005,
+    "flow_count": 4
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\chat_origner\\2025-11-21_chat_log_4.md": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\chat_origner\\2025-11-21_chat_log_4.md",
+    "name": "2025-11-21_chat_log_4.md",
+    "signature": "0x6b",
+    "energy": 107,
+    "density": 0.0022,
+    "flow_count": 34
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\chat_origner\\2025-12-10_chat_log_9.md": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Code_AI\\Reference\\chat_origner\\2025-12-10_chat_log_9.md",
+    "name": "2025-12-10_chat_log_9.md",
+    "signature": "0x40",
+    "energy": 64,
+    "density": 0.0474,
+    "flow_count": 12
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Community\\Flow_Sample.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Community\\Flow_Sample.js",
+    "name": "Flow_Sample.js",
+    "signature": "0x20",
+    "energy": 32,
+    "density": 0.1304,
+    "flow_count": 6
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Community\\Rules.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Community\\Rules.js",
+    "name": "Rules.js",
+    "signature": "0x1e",
+    "energy": 30,
+    "density": 0.4,
+    "flow_count": 6
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Physics_Math\\gravity.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Physics_Math\\gravity.js",
+    "name": "gravity.js",
+    "signature": "0xb",
+    "energy": 11,
+    "density": 0.2727,
+    "flow_count": 3
+  },
+  "D:\\Project_Gongmyung\\Gongmyung_Library\\Underworld\\Festival_Schedule_2025.js": {
+    "path": "D:\\Project_Gongmyung\\Gongmyung_Library\\Underworld\\Festival_Schedule_2025.js",
+    "name": "Festival_Schedule_2025.js",
+    "signature": "0x22",
+    "energy": 34,
+    "density": 0.28,
+    "flow_count": 7
+  }
+}

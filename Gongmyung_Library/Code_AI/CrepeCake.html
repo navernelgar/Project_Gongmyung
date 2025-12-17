@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Gongmyung CrepeCake Editor</title>
+    <style>
+        :root {
+            --bg-color: #ffe6e6;
+            --panel-bg: #fff0f5;
+            --header-bg: #ffb7b2;
+            --text-color: #333;
+            --border-color: #ffcccc;
+            --accent-color: #ff6b6b;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Consolas', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        /* Layout */
+        #main-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        #explorer {
+            width: 250px;
+            background: var(--panel-bg);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+        #editor-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 20px;
+            background: white;
+            position: relative;
+        }
+        #toc {
+            width: 200px;
+            background: var(--panel-bg);
+            border-left: 1px solid var(--border-color);
+            padding: 10px;
+        }
+        #terminal {
+            height: 150px;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 10px;
+            font-family: 'Consolas', monospace;
+            overflow-y: auto;
+            border-top: 2px solid var(--accent-color);
+        }
+        
+        /* Components */
+        .panel-header {
+            background: var(--header-bg);
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+        }
+        .file-item {
+            padding: 5px 10px;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .file-item:hover {
+            background: #ffe0e0;
+        }
+        
+        /* Layers */
+        .layer-section {
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: var(--panel-bg);
+        }
+        .layer-header {
+            padding: 10px;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .layer-content {
+            padding: 15px;
+            min-height: 100px;
+            outline: none;
+            white-space: pre-wrap;
+        }
+        
+        /* Stickers */
+        .sticker {
+            position: absolute;
+            background: #fff9c4;
+            border: 1px solid #fbc02d;
+            padding: 10px;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+            width: 200px;
+            min-height: 100px;
+            cursor: move;
+            z-index: 100;
+            border-radius: 2px;
+        }
+        .sticker-header {
+            font-size: 0.8em;
+            color: #f57f17;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #fbc02d;
+            padding-bottom: 2px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .sticker-content {
+            outline: none;
+        }
+
+        /* Buttons */
+        .btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #ff5252;
+        }
+        a { text-decoration: none; color: var(--text-color); }
+        a:hover { color: var(--accent-color); }
+    </style>
+</head>
+<body>
+
+<div id="main-container">
+    <!-- Left: Explorer -->
+    <div id="explorer">
+        <div class="panel-header">📂 Explorer</div>
+        <div style="padding: 5px;">
+            <button class="btn" onclick="refreshFiles()">Refresh</button>
+            <button class="btn" onclick="newFile()">New</button>
+            <button class="btn" onclick="saveFile()">Save</button>
+        </div>
+        <div id="file-list" style="overflow-y: auto; flex: 1;"></div>
+    </div>
+
+    <!-- Center: Editor -->
+    <div id="editor-area">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <!-- Mode Toggle -->
+            <div style="background: #333; padding: 5px; border-radius: 20px; display: flex; align-items: center;">
+                <button id="btn-mode-logic" onclick="setMode('logic')" class="btn" style="margin:0; border-radius: 15px; background: #2196f3;" title="Switch to Logic Mode (Left Brain) - For Coding">📐 Logic (Left)</button>
+                <button id="btn-mode-narrative" onclick="setMode('narrative')" class="btn" style="margin:0; border-radius: 15px; background: transparent; opacity: 0.5;" title="Switch to Narrative Mode (Right Brain) - For Storytelling">🎨 Narrative (Right)</button>
+            </div>
+
+            <div>
+                <button class="btn" onclick="autoResonate('concept')" style="background: #9c27b0;" title="Generate Structure from Concept">⚡ Auto-Structure</button>
+                <button class="btn" onclick="autoResonate('auto')" style="background: #673ab7;" id="btn-auto-gongmyung" title="Convert Python code into Gongmyung Logic Symbols (○●◎)">🔮 Auto-Gongmyung</button>
+            </div>
+        </div>
+
+        <div class="layer-section" id="layer-1">
+            <div class="layer-header">1. Concept (Prompt/Intent)</div>
+            <div class="layer-content" contenteditable="true" placeholder="Write your concept here..."></div>
+        </div>
+        <div class="layer-section" id="layer-2">
+            <div class="layer-header" id="header-layer-2">2. Structure (Logic)</div>
+            <div class="layer-content" contenteditable="true"></div>
+        </div>
+        <div class="layer-section" id="layer-3">
+            <div class="layer-header" id="header-layer-3">3. Code (Formula/Algorithm)</div>
+            <div class="layer-content" contenteditable="true" style="font-family: monospace;"></div>
+        </div>
+        <div class="layer-section" id="layer-4">
+            <div class="layer-header">4. Implementation (Visual/Verification)</div>
+            <div class="layer-content" contenteditable="true"></div>
+        </div>
+        <div class="layer-section" id="layer-5">
+            <div class="layer-header">5. Execution (Result)</div>
+            <div class="layer-content" contenteditable="true"></div>
+        </div>
+        <div class="layer-section" id="layer-6">
+            <div class="layer-header" id="header-layer-6">6. Gongmyung (Resonance/Syntax)</div>
+            <div class="layer-content" contenteditable="true"></div>
+        </div>
+    </div>
+
+    <!-- Right: TOC -->
+    <div id="toc">
+        <div class="panel-header">📑 Structure</div>
+        <ul style="list-style: none; padding: 10px;">
+            <li><a href="#layer-1">1. Concept</a></li>
+            <li><a href="#layer-2">2. Structure</a></li>
+            <li><a href="#layer-3">3. Code</a></li>
+            <li><a href="#layer-4">4. Implementation</a></li>
+            <li><a href="#layer-5">5. Execution</a></li>
+            <li><a href="#layer-6">6. Gongmyung</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Bottom: Terminal -->
+<div id="terminal">
+    <div>> Gongmyung System Initialized...</div>
+    <div>> Ready for input.</div>
+</div>
+
+<!-- Stickers -->
+<div class="sticker" style="top: 50px; right: 250px;" id="sticker-memo">
+    <div class="sticker-header">📝 Memo <span onclick="this.parentElement.style.display='none'" style="cursor:pointer">x</span></div>
+    <div class="sticker-content" contenteditable="true">Quick notes here...</div>
+</div>
+
+<div class="sticker" style="top: 200px; right: 250px; background: #e1bee7; border-color: #8e24aa;" id="sticker-music">
+    <div class="sticker-header" style="color: #4a148c; border-color: #8e24aa;">🎵 Music <span onclick="this.parentElement.style.display='none'" style="cursor:pointer">x</span></div>
+    <div class="sticker-content">
+        Now Playing: Lo-Fi Beats<br>
+        <button style="font-size:0.8em;">⏯</button> <button style="font-size:0.8em;">⏭</button>
+    </div>
+</div>
+
+<script>
+    let currentFile = null;
+    let currentMode = 'logic'; // 'logic' or 'narrative'
+
+    function setMode(mode) {
+        currentMode = mode;
+        const btnLogic = document.getElementById('btn-mode-logic');
+        const btnNarrative = document.getElementById('btn-mode-narrative');
+        const headerL2 = document.getElementById('header-layer-2');
+        const headerL3 = document.getElementById('header-layer-3');
+        const headerL6 = document.getElementById('header-layer-6');
+        const btnAuto = document.getElementById('btn-auto-gongmyung');
+
+        if (mode === 'logic') {
+            btnLogic.style.background = '#2196f3'; btnLogic.style.opacity = '1';
+            btnNarrative.style.background = 'transparent'; btnNarrative.style.opacity = '0.5';
+            
+            headerL2.innerText = "2. Structure (Logic)";
+            headerL3.innerText = "3. Code (Formula/Algorithm)";
+            headerL6.innerText = "6. Gongmyung (Resonance/Syntax)";
+            btnAuto.innerText = "🔮 Auto-Gongmyung (From Code)";
+            btnAuto.title = "Convert Python code into Gongmyung Logic Symbols (○●◎)";
+            
+            document.querySelector('#layer-3 .layer-content').style.fontFamily = 'monospace';
+        } else {
+            btnNarrative.style.background = '#e91e63'; btnNarrative.style.opacity = '1';
+            btnLogic.style.background = 'transparent'; btnLogic.style.opacity = '0.5';
+            
+            headerL2.innerText = "2. Table of Contents (Story Arc)";
+            headerL3.innerText = "3. Story (Text/Dialogue)";
+            headerL6.innerText = "6. Narrative Flow (Gi-Seung-Jeon-Gyeol)";
+            btnAuto.innerText = "📖 Auto-Narrative (From Story)";
+            btnAuto.title = "Analyze story text and extract the Narrative Arc (起承轉結)";
+            
+            document.querySelector('#layer-3 .layer-content').style.fontFamily = 'inherit';
+        }
+    }
+
+    // Dragging Logic
+    document.querySelectorAll('.sticker').forEach(elmnt => {
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        elmnt.querySelector('.sticker-header').onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    });
+
+    // File Operations
+    async function refreshFiles() {
+        try {
+            const res = await fetch('/api/files');
+            const files = await res.json();
+            const list = document.getElementById('file-list');
+            list.innerHTML = '';
+            files.forEach(file => {
+                const div = document.createElement('div');
+                div.className = 'file-item';
+                div.innerText = file;
+                div.title = file;
+                div.onclick = () => loadFile(file);
+                list.appendChild(div);
+            });
+        } catch (e) {
+            log("Error fetching files: " + e);
+        }
+    }
+
+    async function loadFile(path) {
+        currentFile = path;
+        try {
+            const res = await fetch(`/api/read?path=${encodeURIComponent(path)}`);
+            const content = await res.text();
+            parseContent(content);
+            log(`Loaded: ${path}`);
+        } catch (e) {
+            log("Error loading file: " + e);
+        }
+    }
+
+    async function saveFile() {
+        if (!currentFile) currentFile = prompt("Enter filename to save (e.g., doc.md):");
+        if (!currentFile) return;
+
+        const content = generateContent();
+        try {
+            const res = await fetch('/api/save', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({path: currentFile, content: content})
+            });
+            const result = await res.json();
+            if (result.status === 'success') {
+                log(`Saved: ${currentFile}`);
+                refreshFiles();
+            } else {
+                log(`Error saving: ${result.message}`);
+            }
+        } catch (e) {
+            log("Error saving file: " + e);
+        }
+    }
+
+    function newFile() {
+        currentFile = null;
+        document.querySelectorAll('.layer-content').forEach(el => el.innerText = '');
+        log("New file created.");
+    }
+
+    async function autoResonate(sourceType) {
+        let content = "";
+        let typeToSend = sourceType;
+
+        if (sourceType === 'auto') {
+            // Determine type based on current mode
+            typeToSend = currentMode === 'logic' ? 'code' : 'narrative';
+        }
+
+        if (sourceType === 'concept') {
+            content = document.querySelector('#layer-1 .layer-content').innerText;
+            if (!content.trim()) { 
+                alert("Please write something in Layer 1 (Concept) first."); 
+                document.querySelector('#layer-1 .layer-content').focus();
+                return; 
+            }
+        } else {
+            // Code or Narrative comes from Layer 3
+            const layer3 = document.querySelector('#layer-3 .layer-content');
+            content = layer3.innerText;
+            if (!content.trim()) { 
+                // Fallback to Layer 1 if Layer 3 is empty
+                const layer1 = document.querySelector('#layer-1 .layer-content');
+                if (layer1.innerText.trim()) {
+                    content = layer1.innerText;
+                    log("Using content from Layer 1 (Concept) as Layer 3 is empty.");
+                } else {
+                    const msg = currentMode === 'logic' 
+                        ? "Please write Python code in Layer 3 (Code) first." 
+                        : "Please write your Story/Text in Layer 3 (Story) first.";
+                    alert(msg); 
+                    layer3.focus(); // Move cursor to the box
+                    return; 
+                }
+            }
+        }
+
+        log(`Analyzing ${typeToSend}...`);
+        
+        try {
+            const res = await fetch('/api/analyze', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({type: typeToSend, content: content})
+            });
+            const result = await res.json();
+            
+            if (result.layer_2) {
+                document.querySelector('#layer-2 .layer-content').innerText = result.layer_2;
+                log("Generated Layer 2 (Structure)");
+            }
+            if (result.layer_3 && sourceType === 'concept') {
+                document.querySelector('#layer-3 .layer-content').innerText = result.layer_3;
+                log("Generated Layer 3 (Skeleton)");
+            }
+            if (result.layer_6) {
+                document.querySelector('#layer-6 .layer-content').innerText = result.layer_6;
+                log("Generated Layer 6 (Resonance)");
+            }
+        } catch (e) {
+            log("Error analyzing: " + e);
+        }
+    }
+
+    // Parsing Logic (Markdown based)
+    function parseContent(text) {
+        // Simple parser: split by headers
+        const layers = text.split(/^# Layer (\d+):.*$/gm);
+        // Reset
+        document.querySelectorAll('.layer-content').forEach(el => el.innerText = '');
+        
+        if (layers.length > 1) {
+            for (let i = 1; i < layers.length; i += 2) {
+                const layerNum = layers[i];
+                const content = layers[i+1].trim();
+                const el = document.querySelector(`#layer-${layerNum} .layer-content`);
+                if (el) el.innerText = content;
+            }
+        } else {
+            // Fallback for plain text
+            document.querySelector('#layer-1 .layer-content').innerText = text;
+        }
+    }
+
+    function generateContent() {
+        let text = "";
+        const titles = ["Concept", "Structure", "Code", "Implementation", "Execution", "Gongmyung"];
+        for (let i = 1; i <= 6; i++) {
+            const content = document.querySelector(`#layer-${i} .layer-content`).innerText;
+            if (content.trim()) {
+                text += `# Layer ${i}: ${titles[i-1]}\n${content}\n\n`;
+            }
+        }
+        return text;
+    }
+
+    function log(msg) {
+        const term = document.getElementById('terminal');
+        const line = document.createElement('div');
+        line.innerText = `> ${msg}`;
+        term.appendChild(line);
+        term.scrollTop = term.scrollHeight;
+    }
+
+    // Init
+    refreshFiles();
+</script>
+
+</body>
+</html>

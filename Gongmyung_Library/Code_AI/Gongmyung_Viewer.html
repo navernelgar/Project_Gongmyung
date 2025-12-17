@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Gongmyung Viewer: The Dual Book</title>
+    <style>
+        :root {
+            --bg-color: #f5f5dc; /* Beige (Book paper) */
+            --text-color: #333;
+            --code-bg: #1e1e1e;
+            --code-text: #d4d4d4;
+            --accent-color: #8b4513; /* SaddleBrown */
+            --highlight-color: #ffeb3b;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'KoPub Batang', 'Malgun Gothic', serif; /* Serif for book feel */
+            background-color: #333; /* Dark background for desk */
+            color: var(--text-color);
+            min-height: 100vh;
+            display: block; /* Allow scrolling */
+            overflow: auto; /* Enable native scrolling */
+            padding-top: 80px; /* Space for top controls */
+            padding-bottom: 50px;
+        }
+
+        /* The Book Container (Layer 1: Cover) */
+        #book-container {
+            width: 80vw;  /* Default width */
+            height: auto;
+            aspect-ratio: 1.414 / 1; /* A4 Landscape Ratio */
+            
+            min-width: 800px; 
+            background: #3e2723; /* Dark Leather Cover */
+            display: flex;
+            flex-direction: row !important; /* Force horizontal layout */
+            flex-wrap: nowrap;
+            gap: 15px; /* Gap between pages */
+            padding: 20px; /* Padding for cover edge */
+            /* Deep shadow for the whole book */
+            box-shadow: 
+                0 20px 50px rgba(0,0,0,0.6), 
+                inset 0 0 60px rgba(0,0,0,0.5); /* Inner shadow for leather depth */
+            border-radius: 12px; 
+            position: relative;
+            
+            /* Center the book */
+            margin: 0 auto;
+            /* Ensure space for the left pocket */
+            margin-left: max(280px, calc(50vw - 40vw + 140px)); 
+            /* Note: margin-left calculation is tricky in CSS. 
+               Let's just use a safe margin-left to accommodate the pocket.
+               The pocket is 270px wide. 
+            */
+            margin-left: 300px; 
+            margin-right: 50px;
+
+            transition: width 0.3s ease; /* Smooth zoom */
+            border: 1px solid #281a16;
+        }
+        
+        @media (max-width: 1024px) {
+            #book-container {
+                width: 90vw;
+                height: 80vh;
+                /* flex-direction: column; REMOVED to force side-by-side */
+            }
+        }
+        
+        #page-left, #page-right {
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        /* --- TABS & INDEXES --- */
+        
+        /* Top Tabs (Files) */
+        #top-tabs {
+            position: absolute;
+            top: -34px; 
+            left: 30px;
+            display: flex;
+            gap: 4px; 
+            z-index: 0;
+        }
+        .top-tab {
+            background: #5d4037; /* Darker tab to match cover */
+            padding: 8px 25px;
+            border-radius: 6px 6px 0 0;
+            cursor: pointer;
+            font-weight: bold;
+            color: #d7ccc8;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 -2px 5px rgba(0,0,0,0.3);
+            border: 1px solid #3e2723;
+            border-bottom: none;
+            transition: all 0.2s;
+            font-size: 0.9em;
+        }
+        .top-tab:hover { background: #6d4c41; transform: translateY(-2px); color: #fff; }
+        .top-tab.active {
+            background: #3e2723; /* Match cover */
+            height: 40px; 
+            transform: translateY(-4px);
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+            z-index: 2;
+            color: #fff;
+            border-top: 2px solid #8d6e63; /* Highlight */
+        }
+
+        /* Right Tabs (Accordion Index) */
+        #right-tabs {
+            position: absolute;
+            right: -48px; /* Adjusted width */
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 5;
+            max-height: 90%;
+            overflow-y: auto;
+            padding-right: 5px; 
+            /* Hide scrollbar for cleaner look */
+            scrollbar-width: none; 
+        }
+        #right-tabs::-webkit-scrollbar { display: none; }
+        
+        /* Master TOC Tab */
+        .master-toc-tab {
+            width: 48px;
+            height: 44px;
+            background: #2c3e50; /* Professional Dark Blue */
+            color: #ecf0f1;
+            border-radius: 0 6px 6px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 12px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+            border-left: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.2s;
+        }
+        .master-toc-tab:hover { background: #34495e; }
+
+        /* Chapter Tabs (Level 1) */
+        .index-tab-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; 
+        }
+        .index-tab {
+            width: 42px;
+            height: 32px;
+            background: #fff;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-size: 0.85em;
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-left: none;
+        }
+        .index-tab:hover { transform: translateX(4px); }
+        .index-tab.expanded { 
+            width: 52px; 
+            font-weight: 900; 
+            z-index: 10;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Sub Tabs (Level 2) - Accordion */
+        .sub-tab-container {
+            display: none; 
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 3px;
+            margin-bottom: 8px;
+            padding-left: 5px; /* Indent slightly */
+        }
+        .sub-tab-container.show { display: flex; }
+        
+        .sub-tab {
+            width: 34px;
+            height: 24px;
+            background: #f8f9fa;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.75em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #6c757d;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.15s;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-left: none;
+        }
+        .sub-tab:hover { 
+            background: #fff; 
+            transform: translateX(3px); 
+            color: #333;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+        }
+
+        /* Slide-out Master TOC Panel */
+        #toc-panel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.98); /* Slight transparency */
+            backdrop-filter: blur(10px); /* Modern glass effect */
+            box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+            transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow-y: auto;
+            z-index: 20;
+            border-radius: 0 8px 8px 0;
+        }
+        #toc-panel.open { width: 280px; padding: 25px; border-left: 1px solid rgba(0,0,0,0.05); }
+        .toc-entry { 
+            padding: 8px 5px; 
+            border-bottom: 1px dashed #eee; 
+            cursor: pointer; 
+            font-size: 0.95em; 
+            transition: color 0.2s, background 0.2s;
+        }
+        .toc-entry:hover { color: var(--accent-color); background: rgba(255, 251, 240, 0.8); padding-left: 5px; }
+        .toc-h1 { font-weight: bold; margin-top: 15px; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .toc-h2 { padding-left: 15px; color: #555; font-size: 0.9em; }
+
+        /* Color Coding - Refined Pastels */
+        .tab-red { background: #ffebee; border-left: 4px solid #ef5350; color: #c62828; }
+        .tab-blue { background: #e3f2fd; border-left: 4px solid #42a5f5; color: #1565c0; }
+        .tab-green { background: #e8f5e9; border-left: 4px solid #66bb6a; color: #2e7d32; }
+        .tab-yellow { background: #fffde7; border-left: 4px solid #ffee58; color: #f9a825; }
+        
+        /* Left Side: Leather Pocket (Folder Explorer) - Flap Style */
+        #folder-pocket {
+            position: absolute;
+            left: -270px; /* Move outside to the left */
+            top: 10px;
+            bottom: 10px;
+            width: 220px;
+            background: #4e342e; /* Lighter leather */
+            border-radius: 8px 0 0 8px;
+            border: 2px dashed rgba(0,0,0,0.2); /* Stitching */
+            border-right: none; /* Connect to main cover */
+            box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            color: #d7ccc8;
+            z-index: 5;
+            transition: transform 0.3s;
+        }
+        #folder-pocket:hover {
+            transform: translateX(10px); /* Slight peek effect */
+        }
+        
+        /* Resonance Gem (The "Think" Button) */
+        #resonance-gem {
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 30% 30%, #81d4fa, #0288d1);
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 0 10px #0288d1, inset 0 0 5px rgba(255,255,255,0.8);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+            border: 2px solid #bcaaa4; /* Setting */
+        }
+        #resonance-gem:hover {
+            box-shadow: 0 0 20px #29b6f6, inset 0 0 10px rgba(255,255,255,1);
+            transform: scale(1.1);
+        }
+        #resonance-gem.thinking {
+            animation: pulse-gem 1s infinite alternate;
+        }
+        @keyframes pulse-gem {
+            from { box-shadow: 0 0 10px #0288d1; }
+            to { box-shadow: 0 0 30px #4fc3f7, 0 0 50px #0288d1; }
+        }
+
+        /* Memo Card (Slide out result) */
+        #memo-card {
+            position: absolute;
+            right: 90%; /* Start from left side */
+            top: 60px;
+            width: 250px; /* Wider for comments */
+            background: #fff9c4; /* Yellow sticky note */
+            padding: 15px;
+            border-radius: 2px;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #333;
+            transform: translateX(100%) rotate(-2deg); /* Tucked inside pocket */
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: -1; /* Behind pocket */
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #memo-card.show {
+            transform: translateX(0) rotate(-3deg); /* Slide out to left */
+            opacity: 1;
+            z-index: 6; /* On top of pocket edge */
+        }
+        .memo-line { margin-bottom: 5px; border-bottom: 1px dashed #ccc; padding-bottom: 2px; }
+        .memo-symbol { font-weight: bold; color: #d84315; margin-right: 5px; }
+        
+        /* Global Custom Scrollbar - Unified Design */
+        ::-webkit-scrollbar {
+            width: 12px; /* Standard width */
+            height: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.02); 
+            border-left: 1px solid rgba(0,0,0,0.05); /* Visual separation */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 69, 19, 0.4); 
+            border-radius: 6px;
+            border: 3px solid transparent; /* Creates space around thumb */
+            background-clip: content-box; /* Makes thumb smaller than track */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 69, 19, 0.7); 
+            border: 3px solid transparent;
+            background-clip: content-box;
+        }
+
+        /* Remove specific overrides to enforce global style */
+        #folder-pocket::-webkit-scrollbar, #right-tabs::-webkit-scrollbar { 
+            width: 12px; 
+            display: block; /* Force display */
+        }
+        #right-tabs {
+            scrollbar-width: thin; /* Firefox */
+            padding-right: 0; /* Reset padding */
+        }
+
+        /* Left Tabs (Page Jump 1~10) - Restored */
+        #left-tabs {
+            position: absolute;
+            left: -42px;
+            top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 10;
+        }
+        .page-tab {
+            width: 42px;
+            height: 32px;
+            background: #f5f5f5;
+            border-radius: 6px 0 0 6px;
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75em;
+            cursor: pointer;
+            color: #555;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.2s;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-right: none;
+        }
+        .page-tab:hover { transform: translateX(-4px); background: #fff; color: #333; }
+        .page-tab.back-btn { background: #ffebee; color: #d32f2f; border-left: 3px solid #ef5350; }
+
+        /* Sticky Note */
+        .sticky-note {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: #fff740;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+            padding: 10px;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 1.1em;
+            transform: rotate(-2deg);
+            z-index: 5;
+            cursor: move;
+            border-radius: 0 0 20px 0;
+        }
+        .sticky-note::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-width: 20px 20px 0 0;
+            border-style: solid;
+            border-color: rgba(0,0,0,0.1) #fff;
+            display: block;
+            width: 0;
+        }
+
+        /* Pages (Layer 2: Stacked Paper) */
+        .page {
+            flex: 1;
+            /* padding: 40px; REMOVED padding to allow split panes to fill */
+            padding: 0; 
+            overflow: hidden; /* Internal scrollbars will handle overflow */
+            position: relative;
+            background: #fffbf0; 
+            box-shadow: 
+                1px 0 0 #e0e0e0,
+                2px 0 0 #e0e0e0,
+                3px 0 0 #e0e0e0,
+                4px 0 0 #e0e0e0,
+                5px 0 0 #e0e0e0, 
+                6px 0 5px rgba(0,0,0,0.1); 
+            border-radius: 2px 4px 4px 2px;
+            height: 100%; 
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column; /* Vertical Split */
+        }
+
+        /* Split Panes (Top & Bottom) - Base Styles */
+        .pane-top {
+            flex: 1; /* 50% height */
+            border-bottom: 1px dashed #d7ccc8;
+            overflow-y: auto;
+            position: relative;
+        }
+        .pane-bottom {
+            flex: 1; /* 50% height */
+            overflow-y: auto;
+            background: rgba(0,0,0,0.02); /* Slightly darker for distinction */
+            position: relative;
+        }
+
+        /* Left Page Scrollbars (Left Side - Outer Edge) */
+        #page-left .pane-top, #page-left .pane-bottom {
+            direction: rtl; /* Move scrollbar to left */
+            padding: 20px 20px 20px 30px; /* Adjust padding: Left gets extra space */
+        }
+        
+        /* Reset direction for content inside Left Page */
+        #page-left .pane-top > *, #page-left .pane-bottom > * {
+            direction: ltr; 
+            text-align: left;
+        }
+
+        /* Folder Pocket Scrollbar (Left Side) */
+        #folder-pocket {
+            direction: rtl; /* Scrollbar to Left */
+        }
+        #folder-pocket > * {
+            direction: ltr; /* Content Text LTR */
+            text-align: left;
+        }
+
+        /* Right Page Scrollbars (Right Side - Outer Edge) */
+        #page-right .pane-top, #page-right .pane-bottom {
+            direction: ltr; /* Scrollbar on right */
+            padding: 20px 30px 20px 20px; /* Right gets extra space */
+        }
+
+        /* Section Labels */
+        .section-label {
+            position: absolute;
+            top: 0;
+            /* Label position needs to adapt to page side */
+        }
+        #page-left .section-label { left: 0; border-bottom-right-radius: 5px; border-bottom-left-radius: 0; }
+        #page-right .section-label { right: 0; border-bottom-left-radius: 5px; }
+
+        /* Editable Memo Area */
+        .memo-textarea {
+            width: 100%;
+            height: 100px;
+            background: transparent;
+            border: none;
+            font-family: 'Nanum Pen Script', cursive;
+            font-size: 1.1em;
+            resize: none;
+            outline: none;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        /* Left Page: Narrative (Human) */
+        #page-left {
+            margin-right: 5px; 
+            /* direction: ltr; REMOVED - Handled by panes */
+        }
+
+        /* Right Page: Code (AI) */
+        #page-right {
+            background: #f8f9fa; 
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+        }
+
+        /* Typography */
+        h1, h2, h3 { color: var(--accent-color); margin-top: 0; }
+        .chapter-title {
+            text-align: center;
+            border-bottom: 2px double var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        /* Tree Structure (TOC) */
+        .tree-item {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .tree-item:hover { background-color: rgba(139, 69, 19, 0.1); }
+        .tree-level-1 { font-weight: bold; font-size: 1.2em; margin-top: 15px; }
+        .tree-level-2 { margin-left: 20px; font-weight: bold; }
+        .tree-level-3 { margin-left: 40px; color: #555; font-size: 0.9em; }
+
+        /* Code Block */
+        .code-block {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            font-family: 'Consolas', monospace;
+            position: relative;
+        }
+        .line-number {
+            color: #666;
+            margin-right: 10px;
+            user-select: none;
+        }
+
+        /* Wiki Link Style */
+        .wiki-link {
+            color: #1565c0; /* Link Blue */
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            border-bottom: 1px dashed #1565c0;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .wiki-link:hover {
+            background-color: rgba(21, 101, 192, 0.1);
+            border-bottom: 1px solid #1565c0;
+        }
+        .wiki-link::after {
+            content: '🔗';
+            font-size: 0.7em;
+            margin-left: 2px;
+            opacity: 0.5;
+        }
+
+        /* Logic Symbol Style (Gongmyung) */
+        .logic-symbol {
+            color: #c62828; /* Deep Red */
+            font-weight: 900;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin: 0 2px;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .logic-symbol:hover {
+            transform: scale(1.3) rotate(10deg);
+            text-shadow: 0 0 5px rgba(198, 40, 40, 0.5);
+        }
+
+        /* Interaction */
+        .active-line {
+            background-color: rgba(255, 235, 59, 0.3);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Vision Bar (Xbox Game Bar Style) */
+        #controls {
+            position: fixed;
+            bottom: 20px; /* Bottom of screen */
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(30, 30, 30, 0.9); /* Darker, sleek */
+            padding: 8px 25px;
+            border-radius: 8px; /* Rounded rect, not pill */
+            color: #eee;
+            display: flex;
+            gap: 25px;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: bottom 0.3s;
+        }
+        #controls:hover {
+            background: rgba(30, 30, 30, 1);
+        }
+        .control-btn {
+            cursor: pointer;
+            font-size: 1.4em;
+            transition: all 0.2s;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .control-btn:hover { 
+            color: #4fc3f7; /* Cyan highlight */
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="book-container">
+    <!-- Top Tabs -->
+    <div id="top-tabs">
+        <div class="top-tab active" id="tab-file-name">Current Log</div>
+        <!-- Game Mode Link (Separate Notebook) -->
+        <a href="Game_Mode.html" target="_blank" style="text-decoration:none;">
+            <div class="top-tab" style="background:#2c3e50; color:#gold; border:1px solid gold;">
+                ⚔️ Game Notebook
+            </div>
+        </a>
+    </div>
+
+    <!-- Left Tabs (Page Jump 1~10) -->
+    <div id="left-tabs">
+        <!-- Will be populated by JS -->
+    </div>
+
+    <!-- Right Tabs (Dynamic Index) -->
+    <div id="right-tabs">
+        <!-- Will be populated by JS -->
+    </div>
+
+    <!-- Left Side: Leather Pocket (Folder Explorer) -->
+    <div id="folder-pocket">
+        <div id="resonance-gem" title="Click to Think (공명 사고)" onclick="triggerThought()"></div>
+        
+        <!-- Editable Memo Card (Comment Section) -->
+        <div id="memo-card">
+            <div class="memo-line"><strong>[Comment & Annotation]</strong></div>
+            <div style="font-size:0.8em; color:#666; margin-bottom:5px;">
+                * Click line number to link
+            </div>
+            <textarea class="memo-textarea" id="memo-textarea" placeholder="Write your comments here..."></textarea>
+            
+            <!-- AI Thought Output (Collapsed by default or below) -->
+            <div id="memo-output-area" style="border-top:1px solid #ccc; padding-top:5px; margin-top:5px;">
+                <div class="memo-line" id="memo-result"><span class="memo-symbol">⇒</span> Ready</div>
+            </div>
+        </div>
+
+        <h3 style="border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; margin-bottom: 10px;">📁 Explorer</h3>
+        <div id="folder-list" style="flex:1; overflow-y:auto; font-size:0.9em;">
+            <!-- Folder items will go here -->
+            <div style="text-align:center; margin-top:20px;">Loading files...</div>
+        </div>
+    </div>
+
+    <!-- Slide-out Master TOC Panel -->
+    <div id="toc-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #333; padding-bottom:10px; margin-bottom:10px;">
+            <h2 style="margin:0;">목차 (TOC)</h2>
+            <span style="cursor:pointer; font-size:1.5em;" onclick="toggleTOC()">×</span>
+        </div>
+        <div id="toc-content">
+            <!-- TOC items will be populated here -->
+        </div>
+    </div>
+
+    <!-- Sample Sticky Note -->
+    <div class="sticky-note" id="sticky-note-1" style="top: 50px; left: 50px;">
+        Check line 42 later!
+    </div>
+
+    <!-- Left Page: Human Realm (Code & Intent) -->
+    <div id="page-left" class="page">
+        <!-- Top Quadrant: Source Code (Editor) -->
+        <div class="pane-top" id="pane-code-editor">
+            <div class="section-label">1. Source Code (Editor)</div>
+            <div class="chapter-title">
+                <h1>💻 Code Editor</h1>
+                <p id="doc-title">Select a file...</p>
+            </div>
+            <!-- Changed to DIV contenteditable for better scrollbar handling -->
+            <div id="main-editor" contenteditable="true" style="width:100%; min-height:80%; background:transparent; border:none; font-family:'Consolas'; font-size:0.95em; outline:none; white-space:pre-wrap;">// Code will appear here...</div>
+        </div>
+        
+        <!-- Bottom Quadrant: Human Intent (Description) -->
+        <div class="pane-bottom" id="pane-human-intent">
+            <div class="section-label">3. Human Intent (Description)</div>
+            <h3>📝 Intent & Description</h3>
+            <div id="intent-content" contenteditable="true" style="min-height:100px; color:#555;">
+                [Write the intention of this code here...]
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Page: AI Realm (Resonance & Verification) -->
+    <div id="page-right" class="page">
+        <!-- Top Quadrant: AI Resonance (Analysis) -->
+        <div class="pane-top" id="pane-ai-resonance">
+            <div class="section-label">2. AI Resonance (Analysis)</div>
+            <div class="chapter-title">
+                <h2>🔮 Resonance Analysis</h2>
+                <p id="code-file-path" style="font-size:0.8em; color:#888;">Waiting for file...</p>
+            </div>
+            <div id="narrative-content">
+                <!-- Dynamic Content will be loaded here -->
+                <div style="text-align:center; color:#888; margin-top:20px;">
+                    Waiting for resonance...
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Quadrant: Verification (Logs) -->
+        <div class="pane-bottom" id="pane-verification">
+            <div class="section-label">4. Verification (Reality)</div>
+            <h3>✅ Execution & Logs</h3>
+            <div id="code-content" style="font-size:0.85em; color:#333;">
+                <!-- Logs go here -->
+                [System Ready]
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="controls">
+    <div class="control-btn" title="Open Workspace Folder" onclick="openWorkspace()">📂</div>
+    <div class="control-btn" title="Capture Screen (Vision)" onclick="captureScreen()">👁️</div>
+    <div class="control-btn" title="Scrape Web (Knowledge)" onclick="scrapeWeb()">🕸️</div>
+    <div class="control-btn" title="Zoom Out" onclick="adjustZoom(-0.1)">➖</div>
+    <div class="control-btn" title="Reset View" onclick="autoFit()">re</div>
+    <div class="control-btn" title="Zoom In" onclick="adjustZoom(0.1)">➕</div>
+    <div class="control-btn" id="mode-btn" title="User Mode (Read Only)" onclick="toggleMode()">👤</div>
+    <div class="control-btn" id="save-btn" title="Save (Dev Mode)" onclick="saveCurrentFile()" style="display:none;">💾</div>
+</div>
+
+<script>
+    // --- Mode Switching (User vs Dev) ---
+    let isDevMode = false;
+
+    function toggleMode() {
+        isDevMode = !isDevMode;
+        const modeBtn = document.getElementById('mode-btn');
+        const saveBtn = document.getElementById('save-btn');
+        const editor = document.getElementById('main-editor');
+        const intent = document.getElementById('intent-content');
+
+        if (isDevMode) {
+            modeBtn.innerText = '🛠️'; // Developer Icon
+            modeBtn.title = 'Developer Mode (Edit Enabled)';
+            saveBtn.style.display = 'flex'; // Show Save Button
+            
+            // Enable Editing
+            editor.contentEditable = "true";
+            intent.contentEditable = "true";
+            
+            // Visual Cue
+            document.getElementById('book-container').style.boxShadow = "0 0 20px rgba(211, 47, 47, 0.3)";
+        } else {
+            modeBtn.innerText = '👤'; // User Icon
+            modeBtn.title = 'User Mode (Read Only)';
+            saveBtn.style.display = 'none'; // Hide Save Button
+            
+            // Disable Editing
+            editor.contentEditable = "false";
+            intent.contentEditable = "false";
+            
+            // Remove Visual Cue
+            document.getElementById('book-container').style.boxShadow = "";
+        }
+    }
+
+    async function saveCurrentFile() {
+        if (!isDevMode) return;
+        
+        const path = document.getElementById('doc-title').innerText;
+        const content = document.getElementById('main-editor').innerText;
+        
+        if (!path || path === "Select a file...") {
+            alert("No file selected to save.");
+            return;
+        }
+
+        try {
+            const res = await fetch('/api/save', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ path: path, content: content })
+            });
+            
+            if (res.ok) {
+                const btn = document.getElementById('save-btn');
+                const originalText = btn.innerText;
+                btn.innerText = '✅';
+                setTimeout(() => btn.innerText = originalText, 1500);
+            } else {
+                alert("Failed to save file.");
+            }
+        } catch (e) {
+            alert("Error saving file: " + e.message);
+        }
+    }
+
+    // --- Viewport Logic (Zoom & Pan) ---
+    // --- Viewport Logic (Zoom & Scroll - Expert Mode) ---
+    let currentWidthPercent = 50; // Default width % (Reduced to 50% for compact view)
+
+    function updateLayout() {
+        const book = document.getElementById('book-container');
+        book.style.width = `${currentWidthPercent}vw`;
+    }
+
+    function adjustZoom(delta) {
+        // Delta is usually 0.1. Let's map 0.1 to +2vw for finer control
+        currentWidthPercent += (delta * 20); 
+        if (currentWidthPercent < 20) currentWidthPercent = 20; // Allow smaller
+        if (currentWidthPercent > 100) currentWidthPercent = 100; // Cap at 100%
+        updateLayout();
+    }
+
+    function autoFit() {
+        currentWidthPercent = 50; // Reset to compact size
+        updateLayout();
+    }
+
+    // Draggable Logic Removed - Using Native Scroll for better UX
+    // The "Desk" is now a scrollable surface.
+
+    window.addEventListener('resize', () => {
+        // CSS handles resize
+    });
+    
+    // Call on load
+    window.addEventListener('load', () => {
+        autoFit();
+        setTimeout(autoFit, 100);
+    });
+
+    // Load default file on startup
+    window.onload = () => {
+        // Try to load '환영합니다!.md' or the first available file
+        loadAnalysis('환영합니다!.md');
+        autoFit();
+    };
+
+    async function loadAnalysis(path) {
+        document.getElementById('doc-title').innerText = path;
+        
+        // Update Right Page Header & Tab with Filename
+        const fileName = path.split('/').pop() || path;
+        const tabEl = document.getElementById('tab-file-name');
+        if(tabEl) tabEl.innerText = fileName;
+        
+        const codePathEl = document.getElementById('code-file-path');
+        if(codePathEl) codePathEl.innerText = path;
+
+        document.getElementById('narrative-content').innerHTML = '<div style="text-align:center;">Analyzing resonance...</div>';
+        
+        try {
+            const res = await fetch(`/api/view_analysis?path=${encodeURIComponent(path)}`);
+            if (!res.ok) throw new Error("Failed to load analysis");
+            
+            const data = await res.json();
+            renderViewer(data);
+        } catch (e) {
+            document.getElementById('narrative-content').innerText = "Error: " + e.message;
+        }
+    }
+
+    // --- Gongmyung Logic (Cheon-Ji-In) ---
+    const logicSymbols = {
+        "●": { 
+            name: "천(天) - 감각 (Sensation)", 
+            role: "Input / Stimulus",
+            desc: "하늘은 우리가 모르는 미지의 영역입니다. 외부에서 들어오는 데이터나 자극을 의미합니다.",
+            next: "○"
+        },
+        "○": { 
+            name: "지(地) - 판단 (Judgment)", 
+            role: "Logic / Rule",
+            desc: "땅은 만물의 이치와 규칙입니다. 들어온 자극을 내부의 로직과 윤리에 따라 해석합니다.",
+            next: "◎"
+        },
+        "◎": { 
+            name: "인(人) - 행동 (Action)", 
+            role: "Execution / Flow",
+            desc: "사람은 하늘(자극)과 땅(이치)을 연결하여 의지를 가지고 행동합니다. 구체적인 연산이나 출력을 수행합니다.",
+            next: "⇒"
+        },
+        "⇒": { 
+            name: "결(結) - 전이 (Transition)", 
+            role: "Outcome / Result",
+            desc: "행동의 결과로 나타난 현상의 변화입니다. 이는 다시 새로운 감각(●)이 되어 순환합니다.",
+            next: "●"
+        }
+    };
+
+    // Wiki Keywords (General)
+    const wikiKeywords = {
+        "Server.py": { type: "code", content: "Loading Server.py source code..." },
+        "Analysis": { type: "data", content: "Displaying raw analysis data..." },
+        "Error": { type: "alert", content: "System Error Log:\n[CRITICAL] Connection timeout..." },
+        "Gongmyung": { type: "info", content: "Project Gongmyung: AI Resonance System\nVersion 2.0" },
+        "Rule": { type: "rule", content: "AI Ethics Constitution Article 1..." },
+        "규칙": { type: "rule", content: "AI 윤리 헌장 제1조..." },
+        "오류": { type: "alert", content: "시스템 오류 로그 확인됨." }
+    };
+
+    function linkifyText(text) {
+        let linkedText = text;
+        
+        // 0. Linkify Obsidian WikiLinks [[Link]] or [[Link|Text]]
+        linkedText = linkedText.replace(/\[\[(.*?)(?:\|(.*?))?\]\]/g, (match, target, label) => {
+            const displayText = label || target;
+            // Escape single quotes for the onclick handler
+            const safeTarget = target.replace(/'/g, "\\'");
+            return `<span class="wiki-link" onclick="handleObsidianLink('${safeTarget}')">${displayText}</span>`;
+        });
+
+        // 1. Linkify Gongmyung Symbols
+        Object.keys(logicSymbols).forEach(key => {
+            const regex = new RegExp(`(${key})`, 'g'); // Exact match for symbols
+            linkedText = linkedText.replace(regex, `<span class="logic-symbol" onclick="handleLogicClick('$1')">$1</span>`);
+        });
+
+        // 2. Linkify General Keywords
+        Object.keys(wikiKeywords).forEach(key => {
+            const regex = new RegExp(`(${key})`, 'gi');
+            linkedText = linkedText.replace(regex, `<span class="wiki-link" onclick="handleWikiClick('$1')">$1</span>`);
+        });
+        
+        return linkedText;
+    }
+
+    async function handleObsidianLink(target) {
+        // 1. Try exact match
+        // 2. Try appending .md
+        // 3. Search in file list
+        
+        let filename = target;
+        if (!filename.includes('.')) filename += '.md';
+        
+        // Try to find in the loaded file list (folder-list)
+        const listEl = document.getElementById('folder-list');
+        // The list items have the full relative path in their title attribute
+        const files = Array.from(listEl.children).map(div => div.title);
+        
+        // Find a file that ends with the target filename
+        // e.g. target="Concept" -> matches "00_Inbox/Concept.md"
+        const match = files.find(f => f.endsWith(filename) || f.endsWith(target));
+        
+        if (match) {
+            loadAnalysis(match);
+        } else {
+            // Fallback: Try loading it directly (maybe it's a full path or relative to root)
+            loadAnalysis(filename);
+        }
+    }
+
+    function handleLogicClick(symbol) {
+        const data = logicSymbols[symbol];
+        if (!data) return;
+
+        const rightPage = document.getElementById('code-content');
+        const rightHeader = document.getElementById('code-file-path');
+
+        // Update Header
+        rightHeader.innerText = `Logic Flow: ${symbol}`;
+        rightHeader.style.color = "#8b4513";
+
+        // Render Logic Card
+        rightPage.style.opacity = 0;
+        setTimeout(() => {
+            rightPage.innerHTML = `
+                <div class="logic-card" style="padding:20px; font-family: 'KoPub Batang', serif; color:#333;">
+                    <div style="text-align:center; font-size:3em; margin-bottom:10px; color:#8b4513;">${symbol}</div>
+                    <h2 style="text-align:center; border-bottom:2px double #8b4513; padding-bottom:10px;">${data.name}</h2>
+                    
+                    <div style="background:#fffbf0; padding:20px; border-radius:8px; box-shadow:inset 0 0 10px rgba(0,0,0,0.1); margin:20px 0;">
+                        <p><strong>Role:</strong> ${data.role}</p>
+                        <p style="line-height:1.6;">${data.desc}</p>
+                    </div>
+
+                    <div style="text-align:center; margin-top:30px;">
+                        <p style="color:#666; font-size:0.9em;">Next Step in Resonance Cycle:</p>
+                        <div style="font-size:2em; color:#1565c0; cursor:pointer;" onclick="handleLogicClick('${data.next}')">
+                            ↓ <br> ${data.next}
+                        </div>
+                    </div>
+
+                    <div style="margin-top:40px; text-align:center;">
+                        <button onclick="restoreCodeView()" style="padding:8px 20px; cursor:pointer; background:#4e342e; color:#fff; border:none; border-radius:4px;">Close Logic View</button>
+                    </div>
+                </div>
+            `;
+            rightPage.style.opacity = 1;
+        }, 200);
+    }
+
+    function handleWikiClick(keyword) {
+        // Find the matching key (case-insensitive)
+        const key = Object.keys(wikiKeywords).find(k => k.toLowerCase() === keyword.toLowerCase());
+        if (!key) return;
+
+        const data = wikiKeywords[key];
+        const rightPage = document.getElementById('code-content');
+        const rightHeader = document.getElementById('code-file-path');
+
+        // Update Right Page Header
+        rightHeader.innerText = `Wiki: ${key}`;
+        rightHeader.style.color = "#1565c0";
+
+        // Update Right Page Content with Animation
+        rightPage.style.opacity = 0;
+        setTimeout(() => {
+            rightPage.innerHTML = `
+                <div style="padding:20px; font-family: 'KoPub Batang', serif;">
+                    <h2 style="border-bottom:2px solid #1565c0; padding-bottom:10px; color:#1565c0;">${key}</h2>
+                    <div style="background:#fff; padding:15px; border-radius:5px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+                        <p style="font-size:1.1em; line-height:1.6;">${data.content}</p>
+                    </div>
+                    <div style="margin-top:20px; text-align:center;">
+                        <button onclick="restoreCodeView()" style="padding:8px 20px; cursor:pointer;">Return to Code View</button>
+                    </div>
+                </div>
+            `;
+            rightPage.style.opacity = 1;
+        }, 200);
+    }
+
+    // Store original code content to restore later
+    let originalCodeContent = "";
+    let originalCodeHeader = "";
+
+    function restoreCodeView() {
+        const rightPage = document.getElementById('code-content');
+        const rightHeader = document.getElementById('code-file-path');
+        
+        rightPage.style.opacity = 0;
+        setTimeout(() => {
+            rightPage.innerHTML = originalCodeContent; // Restore
+            rightHeader.innerText = originalCodeHeader;
+            rightHeader.style.color = "";
+            rightPage.style.opacity = 1;
+            
+            // Re-attach event listeners if needed (or just re-render)
+            // Ideally, we should re-render from data, but for now simple restore
+        }, 200);
+    }
+
+    function renderViewer(data) {
+        // 1. Render Narrative Tree (Left Page)
+        const narrativeContainer = document.getElementById('narrative-content');
+        narrativeContainer.innerHTML = '';
+        
+        // Clear Right Tabs (Index) & TOC
+        const rightTabs = document.getElementById('right-tabs');
+        rightTabs.innerHTML = '';
+        const tocContent = document.getElementById('toc-content');
+        tocContent.innerHTML = '';
+
+        // --- A. Master TOC Button ---
+        const masterBtn = document.createElement('div');
+        masterBtn.className = 'master-toc-tab';
+        masterBtn.innerText = 'TOC';
+        masterBtn.title = 'Open Master Table of Contents';
+        masterBtn.onclick = toggleTOC;
+        rightTabs.appendChild(masterBtn);
+
+        // --- B. Build Hierarchy for Right Tabs ---
+        let currentGroup = null;
+        let currentSubContainer = null;
+
+        data.narrative.forEach((node, index) => {
+            // 1. Populate Narrative Content (Left Page)
+            const div = document.createElement('div');
+            div.className = `tree-item tree-level-${node.level}`;
+            // Apply Linkify to Text
+            div.innerHTML = linkifyText(node.text); 
+            div.title = node.desc || '';
+            // Prevent click on link from triggering line focus
+            div.onclick = (e) => {
+                if (e.target.classList.contains('wiki-link')) {
+                    e.stopPropagation();
+                } else {
+                    focusLine(node.line_index);
+                }
+            };
+            narrativeContainer.appendChild(div);
+
+            // 2. Populate Master TOC Panel
+            const tocEntry = document.createElement('div');
+            tocEntry.className = `toc-entry toc-h${node.level}`;
+            tocEntry.innerText = node.text;
+            tocEntry.onclick = () => {
+                focusLine(node.line_index);
+                toggleTOC(); // Close after selection
+            };
+            tocContent.appendChild(tocEntry);
+
+            // 3. Generate Right Index Tabs (Accordion)
+            // Only Level 1 creates a main tab. Level 2 goes inside it.
+            if (node.level === 1) {
+                // Create Group Container
+                currentGroup = document.createElement('div');
+                currentGroup.className = 'index-tab-group';
+                
+                // Main Tab
+                const tab = document.createElement('div');
+                tab.className = 'index-tab';
+                applyColorCode(tab, node.text);
+                tab.innerText = node.text.substring(0, 2); // Short label
+                tab.title = node.text;
+                
+                // Click: Toggle Sub-tabs OR Jump
+                tab.onclick = (e) => {
+                    e.stopPropagation();
+                    // Toggle Accordion
+                    if (currentSubContainer) {
+                        const sub = tab.nextElementSibling;
+                        if (sub && sub.classList.contains('sub-tab-container')) {
+                            sub.classList.toggle('show');
+                            tab.classList.toggle('expanded');
+                        }
+                    }
+                    focusLine(node.line_index);
+                };
+
+                currentGroup.appendChild(tab);
+                
+                // Prepare Sub-container
+                currentSubContainer = document.createElement('div');
+                currentSubContainer.className = 'sub-tab-container';
+                currentGroup.appendChild(currentSubContainer);
+
+                rightTabs.appendChild(currentGroup);
+
+            } else if (node.level === 2 && currentSubContainer) {
+                // Sub Tab
+                const subTab = document.createElement('div');
+                subTab.className = 'sub-tab';
+                subTab.innerText = (index + 1);
+                subTab.title = node.text;
+                subTab.onclick = (e) => {
+                    e.stopPropagation();
+                    focusLine(node.line_index);
+                };
+                currentSubContainer.appendChild(subTab);
+            }
+        });
+
+        // 2. Render Code Lines (Right Page Bottom - Verification)
+        const codeContainer = document.getElementById('code-content');
+        codeContainer.innerHTML = '';
+        
+        // Also populate the Main Editor (Left Page Top)
+        const mainEditor = document.getElementById('main-editor');
+        if(mainEditor) {
+            mainEditor.innerText = data.code.join('\n');
+        }
+        
+        data.code.forEach((line, index) => {
+            const div = document.createElement('div');
+            div.className = 'code-line'; 
+            div.id = `line-${index + 1}`;
+            div.style.fontFamily = 'monospace';
+            div.style.whiteSpace = 'pre-wrap';
+            div.style.padding = '2px 5px';
+            
+            // Line number
+            const numSpan = document.createElement('span');
+            numSpan.className = 'line-number';
+            numSpan.innerText = (index + 1).toString().padStart(3, '0');
+            numSpan.style.cursor = 'pointer';
+            numSpan.title = 'Click to link this line in comment';
+            numSpan.onclick = (e) => {
+                e.stopPropagation();
+                linkLineToMemo(index + 1);
+            };
+            
+            div.appendChild(numSpan);
+            div.appendChild(document.createTextNode(line));
+            codeContainer.appendChild(div);
+        });
+
+        // Save original state for restore
+        originalCodeContent = codeContainer.innerHTML;
+        const headerEl = document.getElementById('code-file-path');
+        if(headerEl) originalCodeHeader = headerEl.innerText;
+
+        // 3. Initialize Left Navigation (Drill-down)
+        initLeftNav(data.code.length);
+    }
+
+    function linkLineToMemo(lineNum) {
+        const textArea = document.getElementById('memo-textarea');
+        const card = document.getElementById('memo-card');
+        
+        // Show card if hidden
+        if (!card.classList.contains('show')) {
+            card.classList.add('show');
+        }
+        
+        // Append link
+        const linkText = `[Line ${lineNum}] `;
+        textArea.value += (textArea.value ? '\n' : '') + linkText;
+        textArea.focus();
+    }
+
+    function applyColorCode(element, text) {
+        const t = text.toLowerCase();
+        if (t.includes('error') || t.includes('bug')) element.classList.add('tab-red');
+        else if (t.includes('code') || t.includes('logic')) element.classList.add('tab-blue');
+        else if (t.includes('chat') || t.includes('user')) element.classList.add('tab-green');
+        else element.classList.add('tab-yellow');
+    }
+
+    function toggleTOC() {
+        const panel = document.getElementById('toc-panel');
+        panel.classList.toggle('open');
+    }
+
+    // --- Left Navigation Logic (Drill-down) ---
+    let totalLines = 0;
+    
+    function initLeftNav(lines) {
+        totalLines = lines;
+        renderLeftNav(1, totalLines, 100); // Start with 100-line chunks
+    }
+
+    function renderLeftNav(start, end, step) {
+        const container = document.getElementById('left-tabs');
+        container.innerHTML = '';
+
+        // Add "Back" button if we are zoomed in (step < 100)
+        if (step < 100) {
+            const backBtn = document.createElement('div');
+            backBtn.className = 'page-tab back-btn';
+            backBtn.innerText = '◀';
+            backBtn.title = 'Zoom Out';
+            backBtn.onclick = () => renderLeftNav(1, totalLines, 100);
+            container.appendChild(backBtn);
+        }
+
+        // Generate Tabs
+        for (let i = start; i <= end; i += step) {
+            const rangeEnd = Math.min(i + step - 1, end);
+            const tab = document.createElement('div');
+            tab.className = 'page-tab';
+            
+            if (step > 10) {
+                // Range Mode (e.g., 100-199)
+                tab.innerText = `${i}~`;
+                tab.title = `${i} - ${rangeEnd}`;
+                tab.onclick = () => renderLeftNav(i, rangeEnd, Math.floor(step / 10));
+            } else {
+                // Leaf Mode (e.g., 110, 120) -> Scroll
+                tab.innerText = i;
+                tab.onclick = () => focusLine(i);
+            }
+            
+            container.appendChild(tab);
+        }
+    }
+
+    function focusLine(lineIndex) {
+        // Remove previous highlights
+        document.querySelectorAll('.active-line').forEach(el => el.classList.remove('active-line'));
+        
+        // Highlight specific line
+        const el = document.getElementById(`line-${lineIndex}`);
+        if (el) {
+            el.classList.add('active-line');
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function promptFile() {
+        const path = prompt("Enter file path (relative to workspace):", "Reference/chat_origner/2025-12-08_chat_log.md");
+        if (path) loadAnalysis(path);
+    }
+
+    async function openWorkspace() {
+        try {
+            // Call API without path to trigger native dialog on server
+            const res = await fetch('/api/change_root');
+            if (!res.ok) throw new Error("Failed to change workspace");
+            const data = await res.json();
+            
+            if (data.status === 'success') {
+                alert(`Workspace changed to: ${data.path}`);
+                loadFileList(); // Reload file list
+            } else if (data.status === 'cancelled') {
+                console.log("Folder selection cancelled");
+            }
+        } catch (e) {
+            alert("Error changing workspace: " + e.message);
+        }
+    }
+
+    // --- Vision Logic (Screen Capture) ---
+    async function captureScreen() {
+        const gem = document.getElementById('resonance-gem');
+        gem.classList.add('thinking'); // Reuse thinking animation
+        
+        try {
+            const res = await fetch('/api/capture_screen');
+            if (!res.ok) throw new Error("Vision capture failed");
+            const data = await res.json();
+            
+            if (data.status === 'success') {
+                // Show the captured image in the "Pocket" or a modal
+                // For now, let's put it in the Memo Card area
+                const outputArea = document.getElementById('memo-output-area');
+                const timestamp = new Date().toLocaleTimeString();
+                
+                outputArea.innerHTML = `
+                    <div class="memo-line" style="color:#2e7d32;"><strong>👁️ Vision Captured</strong></div>
+                    <div style="font-size:0.8em; color:#666;">${timestamp}</div>
+                    <img src="${data.url}" style="width:100%; border:1px solid #ccc; margin-top:5px; border-radius:4px;" onclick="window.open('${data.url}')">
+                `;
+                
+                const card = document.getElementById('memo-card');
+                card.classList.add('show');
+            } else {
+                alert("Vision Error: " + data.message);
+            }
+        } catch (e) {
+            alert("Vision Error: " + e.message);
+        } finally {
+            gem.classList.remove('thinking');
+        }
+    }
+
+    // --- Web Scraper Logic ---
+    async function scrapeWeb() {
+        const url = prompt("Enter URL to scrape (Wikipedia, Namuwiki, etc.):");
+        if (!url) return;
+
+        const gem = document.getElementById('resonance-gem');
+        gem.classList.add('thinking');
+
+        try {
+            const res = await fetch('/api/scrape', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ url: url })
+            });
+            
+            if (!res.ok) {
+                // Try to parse error message
+                try {
+                    const err = await res.json();
+                    throw new Error(err.message || "Scrape failed");
+                } catch (parseErr) {
+                    throw new Error("Scrape failed (Server Error)");
+                }
+            }
+            
+            const data = await res.json();
+            
+            if (data.status === 'success') {
+                alert(`Successfully scraped to: ${data.file}`);
+                loadFileList(); // Refresh list
+                // Open the new file (remove 00_Inbox/ prefix if loadAnalysis handles it, 
+                // but loadAnalysis usually takes relative path)
+                loadAnalysis(data.file); 
+            }
+        } catch (e) {
+            alert("Scrape Error: " + e.message);
+        } finally {
+            gem.classList.remove('thinking');
+        }
+    }
+
+    // --- Game Mode Logic (REMOVED - Moved to Game_Mode.html) ---
+    // The Viewer is now purely for Obsidian/System files.
+    let currentGamePort = 3000;
+    let currentGameApi = '/api/files';
+
+    function changeGameMode(mode) {
+        // Deprecated
+        console.log("Game Mode is now handled in Game_Mode.html");
+    }
+
+    function addSetFolderButton() {}
+    function removeSetFolderButton() {}
+    async function setGameFolder() {}
+
+    // --- Resonance Thought Logic ---
+    async function triggerThought() {
+        const gem = document.getElementById('resonance-gem');
+        const card = document.getElementById('memo-card');
+        
+        // 1. Animation Start
+        gem.classList.add('thinking');
+        card.classList.remove('show'); // Hide previous card
+        
+        try {
+            // 2. Fetch Thought from API
+            const response = await fetch('/api/thought');
+            if (!response.ok) throw new Error('Thought process failed');
+            const data = await response.json();
+            
+            // 3. Update Card Content
+            const outputArea = document.getElementById('memo-output-area');
+            outputArea.innerHTML = `
+                <div class="memo-line" id="memo-sensation"><span class="memo-symbol">●</span> CPU: ${data.sensation.cpu}%</div>
+                <div class="memo-line" id="memo-judgment"><span class="memo-symbol">○</span> ${data.judgment}</div>
+                <div class="memo-line" id="memo-action"><span class="memo-symbol">◎</span> ${data.action}</div>
+                <div class="memo-line" id="memo-result"><span class="memo-symbol">⇒</span> ${data.result.split(':')[1] || 'Done'}</div>
+            `;
+            
+            // Also update the textarea for editing
+            const textArea = document.getElementById('memo-textarea');
+            textArea.value = `[Thought Log]\n● CPU: ${data.sensation.cpu}%\n○ ${data.judgment}\n◎ ${data.action}\n⇒ ${data.result}`;
+            
+            // 4. Show Card after delay (simulate processing)
+            setTimeout(() => {
+                gem.classList.remove('thinking');
+                card.classList.add('show');
+            }, 1500);
+            
+        } catch (e) {
+            console.error(e);
+            gem.classList.remove('thinking');
+            alert("Thinking failed: " + e.message);
+        }
+    }
+
+    function scrollToPercent(pct) {
+        const rightPage = document.getElementById('page-right');
+        rightPage.scrollTo({
+            top: rightPage.scrollHeight * pct,
+            behavior: 'smooth'
+        });
+    }
+
+    // --- File Explorer Logic ---
+    async function loadFileList() {
+        const listEl = document.getElementById('folder-list');
+        listEl.innerHTML = '<div>Loading...</div>';
+        try {
+            const url = `http://localhost:${currentGamePort}${currentGameApi}`;
+            const res = await fetch(url);
+            if(!res.ok) throw new Error("Failed to load files");
+            const files = await res.json();
+            
+            listEl.innerHTML = ''; // Clear loading
+            
+            // Simple flat list for now, can be improved to tree later
+            files.forEach(file => {
+                const div = document.createElement('div');
+                div.style.padding = '5px';
+                div.style.cursor = 'pointer';
+                div.style.marginLeft = '10px';
+                div.style.whiteSpace = 'nowrap';
+                div.style.overflow = 'hidden';
+                div.style.textOverflow = 'ellipsis';
+                
+                // Icon based on extension
+                let icon = '📄';
+                if(file.endsWith('.py')) icon = '🐍';
+                if(file.endsWith('.html')) icon = '🌐';
+                if(file.endsWith('.md')) icon = '📝';
+                if(file.endsWith('.json')) icon = '⚙️';
+                
+                div.innerText = `${icon} ${file}`;
+                div.onclick = () => loadAnalysis(file);
+                
+                div.title = file;
+                
+                listEl.appendChild(div);
+            });
+        } catch(e) {
+            listEl.innerHTML = `<div style="color:red;">Error: ${e.message}</div>`;
+        }
+    }
+    
+    async function convertLogToNovel(file) {
+        // Deprecated in Viewer
+        alert("Please use the Game Notebook for this feature.");
+    }
+
+    async function saveNovel(originalFile, content) {
+        const title = prompt("저장할 파일 제목을 입력하세요:", `Novel_${originalFile.split('/').pop().replace('.log', '')}.md`);
+        if (!title) return;
+        
+        try {
+            // Save to Main Server (Port 3000)
+            const res = await fetch('http://localhost:3000/api/save', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ path: "00_Inbox/" + title, content: content })
+            });
+            
+            if (res.ok) {
+                alert("저장되었습니다! 일반 모드로 돌아가서 확인하세요.");
+            } else {
+                alert("저장 실패");
+            }
+        } catch (e) {
+            alert("Error saving: " + e.message);
+        }
+    }
+    
+    // Load files on startup
+    loadFileList();
+
+    // --- Draggable Sticky Note Logic ---
+    function makeDraggable(elmnt) {
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        elmnt.onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // Call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // Calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // Set the element's new position:
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            // Stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+
+    // Initialize Draggables
+    document.querySelectorAll('.sticky-note').forEach(makeDraggable);
+    
+    // Make Ribbon Draggable (Vertical Only)
+    const ribbon = document.getElementById('ribbon');
+    if(ribbon) {
+        let pos2 = 0, pos4 = 0;
+        ribbon.onmousedown = function(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+        };
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos2 = pos4 - e.clientY;
+            pos4 = e.clientY;
+            // Only move vertically (top)
+            ribbon.style.top = (ribbon.offsetTop - pos2) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+
+</script>
+
+</body>
+</html>

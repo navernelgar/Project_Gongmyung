@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>언더월드 (Underworld)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Malgun Gothic', sans-serif;
+            background: #1a0505; /* Dark Reddish Black */
+            color: #ff6b6b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 15px #ff0000;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #ffcccc;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+        }
+
+        .card {
+            width: 220px;
+            height: 300px;
+            background: rgba(50, 0, 0, 0.5);
+            border: 1px solid #ff4444;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ff6b6b;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #ff0000;
+            background: rgba(80, 0, 0, 0.7);
+        }
+
+        .icon { font-size: 4rem; margin-bottom: 20px; }
+        .title { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; }
+        .desc { font-size: 0.9rem; text-align: center; color: #ffaaaa; }
+
+        .back-btn {
+            margin-top: 50px;
+            padding: 10px 20px;
+            border: 1px solid #ff6b6b;
+            background: transparent;
+            color: #ff6b6b;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background: #ff6b6b; color: #000; }
+    </style>
+</head>
+<body>
+    <h1>🎡 언더월드</h1>
+    <p class="subtitle">구현과 지식의 축제, 그리고 심연의 도구들</p>
+
+    <div class="row">
+        <!-- Kaleidoscope (Moved from Index) -->
+        <a href="/kaleidoscope" class="card">
+            <div class="icon">🔮</div>
+            <div class="title">만화경</div>
+            <div class="desc">코드의 흐름을<br>기호로 시각화</div>
+        </a>
+
+        <!-- CrepeCake (Moved from Index) -->
+        <a href="/crepecake" class="card">
+            <div class="icon">🍰</div>
+            <div class="title">크레이프케이크</div>
+            <div class="desc">5층 구조 아키텍처<br>입체적 분석</div>
+        </a>
+    </div>
+
+    <a href="/" class="back-btn">⬅ 로비로 돌아가기</a>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CrepeCake: Focus Edition</title>
+    <style>
+        /*
+        [공명문: 꾸미기 설명서 (CSS)]
+        이곳은 옷과 화장입니다. 
+        화면의 색깔, 크기, 배치를 결정합니다.
+        */
+        :root {
+            --bg-color: #fff0f5; /* Lavender Blush */
+            --accent-color: #ff6b6b;
+            --text-color: #333;
+            --header-bg: #ffb7b2;
+            --dock-bg: #fff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Consolas', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Left: Explorer (Collapsed by default concept) */
+        #explorer {
+            width: 200px;
+            background: white;
+            border-right: 1px solid #ffcccc;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        /* Center: Main Area */
+        #main-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Accordion Layers */
+        .layer-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 60px; /* Space for dock */
+        }
+        .layer {
+            background: white;
+            border: 1px solid #ffcccc;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .layer.active {
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+            border-color: var(--accent-color);
+        }
+        .layer-header {
+            padding: 15px;
+            background: linear-gradient(to right, #fff0f5, white);
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .layer-header:hover {
+            background: #ffe6e6;
+        }
+        .layer-content {
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .layer.active .layer-content {
+            padding: 20px;
+            height: 300px; /* Fixed height for focus, or auto */
+            opacity: 1;
+            overflow-y: auto;
+        }
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        /* Right/Bottom: Dock */
+        #dock-bar {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        .dock-item {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 20px;
+        }
+        .dock-item:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Popups (Stickers) */
+        .popup {
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+            width: 250px;
+            background: #fff9c4;
+            border: 1px solid #fbc02d;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: none;
+            animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes popUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .popup-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #f57f17;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Mode Switch */
+        .mode-switch {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #ddd;
+            color: #666;
+        }
+        .btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+    [공명문: 뼈대 설명서 (HTML)]
+    이곳은 몸체입니다. 화면에 놓일 물건(버튼, 상자, 글자)들을 배치합니다.
+    -->
+
+    <div id="explorer">
+        <!-- 
+        [왼쪽 서랍장 (Explorer)]
+        <div>: 구역을 나누는 투명한 상자입니다. id="explorer"로 이름을 붙였습니다.
+        ● [내용물]: 파일 이름들 (텍스트)
+        ◎ [화면]: CSS에서 이 이름을 가진 상자는 왼쪽에 고정되도록 설정했습니다.
+        -->
+        <div style="font-weight:bold; margin-bottom:10px; color:var(--accent-color);">📂 Explorer</div>
+        <div style="font-size:0.9em; color:#666;">
+            📄 2025-12-08_chat_log.md<br>
+            📄 main_logic.py<br>
+            📄 story_draft.txt
+        </div>
+    </div>
+
+    <div id="main-area">
+        <!-- 
+        [메인 작업대 (Main Area)]
+        이곳은 사용자가 실제로 글을 쓰고 작업을 하는 넓은 공간입니다.
+        -->
+        <div class="mode-switch">
+            <!-- 
+            <button>: 클릭할 수 있는 버튼을 만듭니다.
+            onclick="...": "클릭하면 따옴표 안의 명령(함수)을 실행해라"라는 뜻입니다.
+            -->
+            <button class="btn active" onclick="toggleMode('logic')">📐 Logic Mode</button>
+            <button class="btn" onclick="toggleMode('narrative')">🎨 Narrative Mode</button>
+        </div>
+
+        <div class="layer-container">
+            <!-- 
+            [겹겹이 쌓인 상자들 (Layer Stack)]
+            class="layer": 이 상자들은 모두 똑같은 모양(layer 스타일)을 가집니다.
+            -->
+            <!-- Layer 1 -->
+            <div class="layer" id="l1">
+                <div class="layer-header" onclick="toggleLayer('l1')">
+                    <span>1. Concept (Prompt)</span>
+                    <span class="status">✨</span>
+                </div>
+                <div class="layer-content">
+                    <textarea placeholder="Write your core concept here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Layer 2 -->
+            <div class="layer" id="l2">
+                <div class="layer-header" onclick="toggleLayer('l2')">
+                    <span>2. Structure (Logic/Arc)</span>
+                    <span class="status">🔒</span>
+                </div>
+                <div class="layer-content">
+                    <textarea placeholder="Define the structure..."></textarea>
+                </div>
+            </div>
+
+            <!-- Layer 3 (Active by default) -->
+            <div class="layer active" id="l3">
+                <div class="layer-header" onclick="toggleLayer('l3')">
+                    <span>3. Code / Story (Main Editor)</span>
+                    <span class="status">✏️ Editing...</span>
+                </div>
+                <div class="layer-content">
+                    <textarea style="font-family: monospace;">
+def hello_world():
+    print("Hello, Gongmyung!")
+    # This is the main focus area.
+    # Other layers are collapsed to reduce noise.
+                    </textarea>
+                </div>
+            </div>
+
+            <!-- Layer 6 -->
+            <div class="layer" id="l6">
+                <div class="layer-header" onclick="toggleLayer('l6')">
+                    <span>6. Gongmyung (Resonance)</span>
+                    <span class="status">🔮</span>
+                </div>
+                <div class="layer-content">
+                    <textarea placeholder="System resonance analysis..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dock Bar -->
+    <div id="dock-bar">
+        <div class="dock-item" onclick="togglePopup('memo')" title="Memo">📝</div>
+        <div class="dock-item" onclick="togglePopup('music')" title="Music">🎵</div>
+        <div class="dock-item" onclick="togglePopup('terminal')" title="Terminal">💻</div>
+    </div>
+
+    <!-- Popups -->
+    <div id="popup-memo" class="popup">
+        <div class="popup-header">Memo <span onclick="togglePopup('memo')" style="cursor:pointer">x</span></div>
+        <textarea style="height:100px; background:transparent;">Don't forget to check the 8th dimension logic.</textarea>
+    </div>
+
+    <div id="popup-music" class="popup" style="background:#e1bee7; border-color:#8e24aa;">
+        <div class="popup-header" style="color:#4a148c;">Music <span onclick="togglePopup('music')" style="cursor:pointer">x</span></div>
+        <div>Now Playing: Lo-Fi Beats 🎧</div>
+        <div style="margin-top:10px; text-align:center;">⏮️ ⏯️ ⏭️</div>
+    </div>
+
+    <!-- 공명 추적자 (디버깅 도구) 연결 -->
+    <script src="Gongmyung_Tracer.js"></script>
+    <script>
+        // [안전 장치] 만약 추적자 파일(Gongmyung_Tracer.js)을 못 찾으면, 
+        // 에러가 나지 않게 '가짜 추적자'를 만듭니다.
+        if (!window.gm) {
+            console.warn("공명 추적자를 찾을 수 없습니다. 기본 모드로 동작합니다.");
+            window.gm = {
+                input: () => {},
+                logic: () => {},
+                action: () => {}
+            };
+        }
+    </script>
+
+    <script>
+        /* 
+        [공명문: 코드 해설서]
+        코드가 낯선 분들을 위해, 코드 바로 아래에 설명을 달았습니다.
+        */
+
+        function toggleLayer(id) {
+            /*
+            [코드] function toggleLayer(id)
+            [기호] ● (행동 정의 및 입력)
+            [해설] 
+            - function: "기능을 만들겠다"는 뜻입니다.
+            - toggleLayer: 기능의 이름입니다. (상자 열고 닫기)
+            - (id): 이 기능을 쓸 때 필요한 재료입니다. (몇 번 상자인지)
+            */
+
+            // [Debug] 추적 시작
+            gm.input("Layer ID 수신", id);
+
+            document.querySelectorAll('.layer').forEach(l => {
+                /*
+                [코드] document.querySelectorAll('.layer').forEach(...)
+                [기호] ○ (전체 탐색)
+                [해설]
+                - document: 이 문서 전체에서
+                - querySelectorAll: '.layer'라는 이름표를 가진 상자를 모두 찾아서
+                - forEach: 하나씩 꺼내서 검사합니다.
+                */
+                
+                gm.logic(`ID 비교 (${l.id} == ${id})`, l.id === id);
+                
+                if (l.id === id) {
+                    /*
+                    [코드] if (l.id === id)
+                    [기호] ○ (조건 판단)
+                    [해설] "지금 검사하는 상자의 번호(l.id)가 입력받은 번호(id)와 같은가?" 확인합니다.
+                    */
+
+                    l.classList.toggle('active');
+                    /*
+                    [코드] l.classList.toggle('active')
+                    [기호] ◎ (행동/결과)
+                    [해설]
+                    - classList: 상자의 스타일 목록에서
+                    - toggle: 'active'가 있으면 끄고, 없으면 켭니다. (상자 열기/닫기)
+                    */
+                    gm.action("상자 열기/닫기", l);
+
+                } else {
+                    l.classList.remove('active'); 
+                    /*
+                    [코드] l.classList.remove('active')
+                    [기호] ◎ (행동/결과)
+                    [해설] 번호가 다르면 무조건 'active'를 지워서 상자를 닫습니다.
+                    */
+                }
+            });
+        }
+
+        function togglePopup(type) {
+            /*
+            [코드] function togglePopup(type)
+            [기호] ● (행동 정의)
+            [해설] 'togglePopup'이라는 기능을 만듭니다. 'type'(팝업 종류)을 재료로 받습니다.
+            */
+
+            const el = document.getElementById('popup-' + type);
+            /*
+            [코드] const el = document.getElementById(...)
+            [기호] ○ (대상 찾기)
+            [해설]
+            - const el: 'el'이라는 별명을 붙여서 기억해둡니다.
+            - getElementById: ID가 'popup-종류'인 요소를 찾아옵니다.
+            */
+            
+            if (el) {
+                /*
+                [코드] if (el)
+                [기호] ○ (안전 장치)
+                [해설] "찾으려는 팝업 상자가 실제로 존재하는가?" 확인합니다.
+                */
+
+                el.style.display = el.style.display === 'block' ? 'none' : 'block';
+                /*
+                [코드] el.style.display = ...
+                [기호] ◎ (행동/결과)
+                [해설] 현재 보이면(block) 숨기고(none), 숨겨져 있으면 보이게 합니다.
+                */
+            }
+        }
+
+        function toggleMode(mode) {
+            /*
+            [코드] function toggleMode(mode)
+            [기호] ● (행동 정의)
+            [해설] 'toggleMode'라는 기능을 만듭니다. (로직 모드 / 소설 모드 전환)
+            */
+
+            document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+            /*
+            [코드] document.querySelectorAll('.btn')...remove('active')
+            [기호] ◎ (초기화 행동)
+            [해설] 모든 버튼(.btn)을 찾아서, 켜져 있는 불(active)을 다 끕니다.
+            */
+            
+            event.target.classList.add('active');
+            /*
+            [코드] event.target.classList.add('active')
+            [기호] ◎ (선택 행동)
+            [해설] 방금 클릭한 그 버튼(event.target)에만 불(active)을 켭니다.
+            */
+        }
+    </script>
+</body>
+</html>

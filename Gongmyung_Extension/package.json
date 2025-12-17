@@ -1,0 +1,55 @@
+{
+  "name": "gongmyung-lens",
+  "displayName": "Gongmyung Lens (공명 렌즈)",
+  "description": "Code commentary and visualization system based on Gongmyung philosophy.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:html",
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gongmyung.enableLens",
+        "title": "Gongmyung: Enable Lens (공명 렌즈 켜기)"
+      },
+      {
+        "command": "gongmyung.setDifficulty",
+        "title": "Gongmyung: Set Difficulty (난이도 설정)"
+      }
+    ],
+    "configuration": {
+      "title": "Gongmyung Lens",
+      "properties": {
+        "gongmyung.difficulty": {
+          "type": "string",
+          "enum": [
+            "seed",
+            "stem",
+            "flower"
+          ],
+          "default": "seed",
+          "description": "Explanation Difficulty Level (Seed=Beginner, Stem=Intermediate, Flower=Advanced)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^16.x",
+    "typescript": "^5.0.0"
+  }
+}
