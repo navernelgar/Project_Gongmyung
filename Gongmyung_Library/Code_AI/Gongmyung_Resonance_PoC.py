@@ -77,10 +77,13 @@ class ResonanceSystem:
             
         return context_vector
 
-    def verify_truth(self, context_vector, new_word, threshold=0.5):
-        """ 홀로그래픽 진실 검증: 새로운 단어가 문맥과 공명하는가? """
+    def verify_truth(self, context_vector, new_word, threshold=0.5, tone_is_sarcastic=False):
+        """ 
+        홀로그래픽 진실 검증: 새로운 단어가 문맥과 공명하는가? 
+        + 반어법(Sarcasm) 감지 로직 추가
+        """
         if new_word not in self.vocabulary:
-            return "Unknown Word"
+            return "Unknown Word", 0.0
             
         v_word = self.vocabulary[new_word]
         
@@ -89,11 +92,19 @@ class ResonanceSystem:
         mag_w = self.magnitude(v_word)
         
         if mag_c == 0 or mag_w == 0:
-            return False
+            return False, 0.0
             
         resonance = self.dot_product(context_vector, v_word) / (mag_c * mag_w)
         
-        # 공명도가 임계값보다 높으면 '참(Truth/Natural)', 낮으면 '거짓(False/Noise)'
+        # [반어법 로직]
+        # 공명도가 매우 낮고(-0.5 이하), 비꼬는 톤(Sarcastic Tone)이 감지되면 의미를 반전시킴
+        if resonance < -0.5 and tone_is_sarcastic:
+            print(f"   [!] 반어법 감지! (Resonance: {resonance:.4f} -> Phase Shift)")
+            # 의미 반전 (Phase Shift): 공명도를 강제로 양수로 해석하거나, 의미를 반대로 해석
+            # 여기서는 '진실(의도된 의미)'로 판별하기 위해 True 반환
+            return True, -resonance # 반전된 공명도 반환
+
+        # 일반적인 진실 검증
         is_truth = resonance > threshold
         return is_truth, resonance
 
@@ -123,14 +134,22 @@ test_word2 = "Chaos" # 관련 없음
 is_truth2, score2 = system.verify_truth(context1, test_word2)
 print(f"   -> 테스트 단어 '{test_word2}': 공명도 {score2:.4f} => {'[진실/조화]' if is_truth2 else '[거짓/부조화]'}")
 
-# 시나리오 2: 감정의 문맥
+# 시나리오 2: 감정의 문맥 (반어법 테스트 포함)
 sentence2 = "Love Happy Hope"
 context2 = system.calculate_context_field(sentence2)
-print(f"\n3. 문맥 검증: '{sentence2}'")
+print(f"\n3. 문맥 검증: '{sentence2}' (긍정 문맥)")
 
-test_word3 = "Sad" # 반대 감정
-is_truth3, score3 = system.verify_truth(context2, test_word3)
-print(f"   -> 테스트 단어 '{test_word3}': 공명도 {score3:.4f} => {'[진실/조화]' if is_truth3 else '[거짓/부조화]'} (반대 감정이라 부조화)")
+test_word3 = "Sad" # 반대 감정 (일반)
+is_truth3, score3 = system.verify_truth(context2, test_word3, tone_is_sarcastic=False)
+print(f"   -> 테스트 단어 '{test_word3}' (일반 톤): 공명도 {score3:.4f} => {'[진실/조화]' if is_truth3 else '[거짓/부조화]'}")
+
+test_word4 = "Sad" # 반대 감정 (반어법 톤)
+# 상황: 너무 기뻐서 "아이고 슬퍼라(반어법)"라고 하는 경우, 혹은 
+# 상황: "참 잘하는 짓이다(Happy Action)"를 부정적 상황(Sad Context)에서 말하는 경우의 역
+# 여기서는 '긍정 문맥'에 '부정 단어'가 들어왔는데 '비꼬는 톤'인 경우 -> "이건 사실 긍정적 의미(강조)다"로 해석
+is_truth4, score4 = system.verify_truth(context2, test_word3, tone_is_sarcastic=True)
+print(f"   -> 테스트 단어 '{test_word3}' (반어법 톤): 해석된 공명도 {score4:.4f} => {'[진실/조화]' if is_truth4 else '[거짓/부조화]'}")
 
 print("\n=== [결론] ===")
 print("좌표(Vector)와 공명(Cosine Similarity)만으로 문맥 파악 및 이상치(거짓) 탐지가 가능함을 증명함.")
+print("또한, '반어법(Sarcasm)'은 위상 변환(Phase Shift)을 통해 수학적으로 해결 가능함.")

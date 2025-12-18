@@ -60,6 +60,18 @@
     *   **거짓(Falsehood)**: 전체 패턴에서 튀어나가거나 흐름을 끊는 **부조화(Dissonance)** 혹은 **노이즈(Noise)**.
     *   따라서, 방대한 데이터를 일일이 대조하지 않아도, **패턴의 깨짐(Crack)**을 감지하는 것만으로도 모순이나 거짓을 추론해낼 수 있다.
 
+### 8. 반어법과 위상 변환 (Irony & Phase Shift)
+> "참 잘하는 짓이다"는 칭찬이 아니다. 이는 **극단적 부조화(Extreme Dissonance)**를 통해 의미를 180도 뒤집는 **위상 변환(Phase Shift)** 현상이다.
+
+*   **맥락의 충돌 (Contextual Clash)**:
+    *   상황(Context)은 '실수/사고(Negative)'인데, 말(Word)은 '잘했다(Positive)'인 경우.
+    *   단순한 거짓말과 달리, 반어법은 **특정 톤(Tone)**이나 **과장된 강조**를 동반한다.
+
+*   **위상 반전 (Phase Inversion)**:
+    *   공명 시스템은 상황과 단어 사이의 **공명도가 극도로 낮을 때(-1에 가까울 때)**, 그리고 **'비꼬는 톤'**이 감지될 때, 해당 단어의 벡터를 **180도 회전(Rotate)**시킨다.
+    *   즉, `Positive Vector` $\times$ `Irony Operator(-1)` = `Negative Meaning`.
+    *   이것이 바로 한국어의 '반어법'을 수학적으로 이해하는 열쇠다.
+
 ---
 *기록일: 2025-12-18*
 *제안자: User (Gongmyung Master)*

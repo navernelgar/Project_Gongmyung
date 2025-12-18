@@ -30,6 +30,12 @@ $$ D(w_{new}) = 1 - R(V(w_{new}), C(S)) $$
     *   $D(w_{new}) < \epsilon$ (임계값): **공명 (Resonance)** $\rightarrow$ **참(Truth) / 자연스러움**
     *   $D(w_{new}) > \epsilon$ (임계값): **부조화 (Dissonance)** $\rightarrow$ **거짓(False) / 이상치(Outlier)**
 
+### 2.3 반어법 연산자 (Irony Operator: Phase Shift)
+만약 문맥과 단어의 공명도가 극도로 낮고($R \approx -1$), 특정 톤 벡터($V_{tone}$)가 감지되면 의미를 반전시킨다.
+$$ V_{meaning} = \begin{cases} V(w) & \text{if } R(V(w), C(S)) > \theta_{neg} \\ -1 \cdot V(w) & \text{if } R(V(w), C(S)) \le \theta_{neg} \text{ AND } HasIronyTone(V_{tone}) \end{cases} $$
+*   **위상 변환**: 벡터 공간에서의 $180^\circ$ 회전.
+*   "잘한다(Positive)" $\xrightarrow{\text{Irony}}$ "못한다(Negative)"
+
 ---
 
 ## 3. 에너지 효율성 증명 (Proof of Energy Efficiency)
