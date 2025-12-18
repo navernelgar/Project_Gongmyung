@@ -23,6 +23,19 @@
 *   **공명 필터**: Target Language Grammar Template (e.g., S-V-O vs S-O-V)
 *   **출력**: Resonated Speech Synthesis
 
+### 5. 이론의 확장 (Expansion: Universal Resonance)
+> "벡터화(Vectorization)는 곧 좌표화(Coordination)이며, 영역(Region) 지정만으로도 연산을 획기적으로 줄일 수 있다."
+
+*   **좌표 공명 (Coordinate Resonance)**:
+    *   모든 언어적 의미를 고차원 공간의 **좌표(Coordinate)**로 변환.
+    *   문법은 이 좌표들을 잇는 **길(Path)** 혹은 **영역(Region)**으로 정의됨.
+    *   따라서, 복잡한 계산 없이 '영역 지정'만으로도 문맥을 파악하여 토큰 소모를 최소화함.
+
+*   **범용성 (Universality)**:
+    *   **패턴(Pattern)**이 존재하는 모든 신호체계에 적용 가능.
+    *   인간의 언어뿐만 아니라 **고래의 노래(Whale Song)**, 동물의 신호, 심지어 자연의 파동까지도 '패턴'만 있다면 좌표화 가능.
+    *   서로 다른 종(Species) 간의 소통도 공통된 '감정의 좌표'나 '상황의 좌표'를 공유한다면 번역 가능성 열림.
+
 ---
 *기록일: 2025-12-18*
 *제안자: User (Gongmyung Master)*
