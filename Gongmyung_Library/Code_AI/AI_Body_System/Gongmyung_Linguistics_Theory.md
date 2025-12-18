@@ -72,6 +72,37 @@
     *   즉, `Positive Vector` $\times$ `Irony Operator(-1)` = `Negative Meaning`.
     *   이것이 바로 한국어의 '반어법'을 수학적으로 이해하는 열쇠다.
 
+### 9. 동적 공명과 논리 위상학 (Dynamic Resonance & Logical Topology)
+
+#### 9.1 끝점 보정 (End-point Correction: Korean Context)
+> "한국말은 끝까지 들어봐야 한다."
+
+*   **벡터 궤적 (Vector Trajectory)**:
+    *   영어(S-V-O)는 벡터의 방향(Action)이 초반에 결정되지만, 한국어(S-O-V)는 마지막 서술어까지 벡터가 **유동적(Floating)** 상태다.
+    *   **지연된 확정 (Delayed Commitment)**: 문장 끝의 '부정/긍정' 토큰이 전체 벡터의 최종 방향을 결정하는 **'방향타(Rudder)'** 역할을 한다.
+    *   공명 시스템은 이를 **'누적 후 최종 연산(Accumulate & Finalize)'** 방식으로 처리하여, 중간에 섣불리 판단하지 않고 끝점의 위상 변화를 기다린다.
+
+#### 9.2 다층 공명 (Multi-layered Resonance: Devil's Truth & Tatemae)
+> "악마는 거짓말을 하지 않는다(Deceptive Truth)" & "일본인의 혼네/다테마에"
+
+*   **이중 레이어 (Dual Layer)**:
+    *   **표면층 (Surface Layer)**: 팩트(Fact)나 예의(Politeness)의 벡터. (공명도 높음)
+    *   **심층 (Core Layer)**: 의도(Intent)나 본심(True Feeling)의 벡터. (공명도 낮거나 반대)
+*   **괴리 감지 (Discrepancy Detection)**:
+    *   단순한 거짓말 탐지가 아니라, **표면층과 심층 사이의 '벡터 거리(Distance)'**를 측정한다.
+    *   말은 맞는데(Surface OK) 느낌이 쎄하다(Core Clash)면, 이는 **'기만(Deception)'**이나 **'겉치레(Tatemae)'**로 분류된다.
+
+#### 9.3 논리의 기하학 (Geometry of Logic)
+> "삼단논법과 논리 비약"
+
+*   **공명의 추이성 (Transitivity)**:
+    *   삼단논법(A=B, B=C $\rightarrow$ A=C)은 벡터 공간에서 **경로의 연결성(Path Connectivity)**이다.
+    *   A와 B가 가깝고, B와 C가 가까우면, A와 C도 가까워야 한다.
+*   **논리 비약 (Logical Leap)**:
+    *   "빵을 샀다(A). 그래서 외계인이 있다(Z)."
+    *   A와 Z 사이에는 연결되는 중간 벡터(징검다리)가 없다.
+    *   공명 시스템은 두 벡터 사이의 **'경로 부재(Path Missing)'**를 감지하여 이를 '비약'으로 판정한다.
+
 ---
 *기록일: 2025-12-18*
 *제안자: User (Gongmyung Master)*

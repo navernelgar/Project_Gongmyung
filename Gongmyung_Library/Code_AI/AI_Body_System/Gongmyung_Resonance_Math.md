@@ -38,6 +38,21 @@ $$ V_{meaning} = \begin{cases} V(w) & \text{if } R(V(w), C(S)) > \theta_{neg} \\
 
 ---
 
+### 2.4 논리 위상학 (Logical Topology)
+
+#### 2.4.1 공명의 추이성 (Transitivity)
+삼단논법의 수학적 표현:
+$$ R(A, C) \ge R(A, B) \cdot R(B, C) - \delta $$
+($\delta$: 허용 오차)
+*   만약 $R(A, B) \approx 1$ 이고 $R(B, C) \approx 1$ 인데 $R(A, C) \ll 1$ 이라면, 이는 **논리적 모순**이거나 **비유클리드 공간(왜곡된 논리)**임을 의미함.
+
+#### 2.4.2 다층 벡터 (Multi-layered Vector)
+기만적 진실(Deceptive Truth)을 탐지하기 위한 이중 벡터 모델:
+$$ V_{total} = \alpha V_{surface} + (1-\alpha) V_{core} $$
+*   **기만 탐지 조건**: $R(V_{surface}, \text{Fact}) \approx 1$ (사실 부합) BUT $R(V_{core}, \text{Intent}) \ll 0$ (의도 불일치).
+
+---
+
 ## 3. 에너지 효율성 증명 (Proof of Energy Efficiency)
 
 ### 3.1 기존 방식 (Autoregressive)
