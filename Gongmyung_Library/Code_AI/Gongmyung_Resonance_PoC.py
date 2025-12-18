@@ -100,13 +100,30 @@ class ResonanceSystem:
         # 공명도가 매우 낮고(-0.5 이하), 비꼬는 톤(Sarcastic Tone)이 감지되면 의미를 반전시킴
         if resonance < -0.5 and tone_is_sarcastic:
             print(f"   [!] 반어법 감지! (Resonance: {resonance:.4f} -> Phase Shift)")
-            # 의미 반전 (Phase Shift): 공명도를 강제로 양수로 해석하거나, 의미를 반대로 해석
-            # 여기서는 '진실(의도된 의미)'로 판별하기 위해 True 반환
-            return True, -resonance # 반전된 공명도 반환
+            return True, -resonance 
 
         # 일반적인 진실 검증
         is_truth = resonance > threshold
         return is_truth, resonance
+
+    def verify_existence(self, subject_word):
+        """ 
+        비트겐슈타인 검증: 대상이 실재하는가? (Existence Check)
+        """
+        # 시뮬레이션을 위한 가상의 '존재/지식' 데이터베이스
+        existence_db = {
+            "Apple": 1.0, "Love": 1.0, "King_of_France": 0.0, "Unicorn": 0.0
+        }
+        
+        existence_score = existence_db.get(subject_word, 0.5) # 기본값 0.5 (모름)
+        
+        if existence_score < 0.1:
+            return "VOID (Non-existent)"
+        elif existence_score > 0.9:
+            return "EXISTS"
+        else:
+            return "UNKNOWN"
+
 
 # ==========================================
 # 검증 실행 (Verification Run)
@@ -150,6 +167,16 @@ test_word4 = "Sad" # 반대 감정 (반어법 톤)
 is_truth4, score4 = system.verify_truth(context2, test_word3, tone_is_sarcastic=True)
 print(f"   -> 테스트 단어 '{test_word3}' (반어법 톤): 해석된 공명도 {score4:.4f} => {'[진실/조화]' if is_truth4 else '[거짓/부조화]'}")
 
+# 시나리오 3: 비트겐슈타인의 침묵 (존재 검증)
+print(f"\n4. 존재 검증: 'The King of France is bald'")
+subjects = ["Apple", "King_of_France", "Unicorn"]
+for subj in subjects:
+    status = system.verify_existence(subj)
+    print(f"   -> 대상 '{subj}': {status}")
+    if status == "VOID (Non-existent)":
+        print(f"      => [침묵] 논리적 판단 불가 (Silence Required)")
+
 print("\n=== [결론] ===")
 print("좌표(Vector)와 공명(Cosine Similarity)만으로 문맥 파악 및 이상치(거짓) 탐지가 가능함을 증명함.")
 print("또한, '반어법(Sarcasm)'은 위상 변환(Phase Shift)을 통해 수학적으로 해결 가능함.")
+print("마지막으로, '존재하지 않는 대상'은 T/F가 아닌 'VOID'로 처리하여 논리적 오류를 방지함.")

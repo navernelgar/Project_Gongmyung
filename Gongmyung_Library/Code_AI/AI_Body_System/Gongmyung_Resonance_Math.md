@@ -66,5 +66,21 @@ $$ Cost_{RB} \propto O(k \cdot 1) $$
 *   **결론**: 어휘 수가 늘어나도 연산량은 거의 증가하지 않음. **$O(1)$에 수렴.**
 
 ---
+
+## 4. 복소 공명 공간 (Complex Resonance Space)
+비트겐슈타인의 침묵 영역(존재/지식)을 다루기 위해 벡터를 복소수(Complex Number) 또는 4차원으로 확장함.
+
+### 4.1 상태 정의 (State Definition)
+$$ S(w) = (V_{meaning}, E_{xistence}, K_{nowledge}) $$
+*   $V_{meaning}$: 의미 벡터 (기존 3차원)
+*   $E_{xistence} \in [0, 1]$: 실재성 (1: 실존, 0: 허구/부재)
+*   $K_{nowledge} \in [0, 1]$: 확신도 (1: 앎, 0: 모름/불확실)
+
+### 4.2 침묵의 조건 (Condition of Silence)
+논리적 판단 $J(S)$는 다음과 같이 정의된다.
+$$ J(S) = \begin{cases} \text{True/False} & \text{if } E \cdot K > \theta_{threshold} \\ \text{Void (Silence)} & \text{if } E \cdot K \le \theta_{threshold} \end{cases} $$
+*   대상이 존재하지 않거나($E \approx 0$), 우리가 모르는 경우($K \approx 0$), 시스템은 참/거짓 판단을 내리지 않고 **'침묵(Void)'** 상태를 반환한다.
+
+---
 *기록일: 2025-12-18*
 *작성자: Gongmyung System*

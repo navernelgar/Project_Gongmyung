@@ -103,6 +103,21 @@
     *   A와 Z 사이에는 연결되는 중간 벡터(징검다리)가 없다.
     *   공명 시스템은 두 벡터 사이의 **'경로 부재(Path Missing)'**를 감지하여 이를 '비약'으로 판정한다.
 
+### 10. 언어의 한계와 차원 확장 (The Limits of Language & Dimensional Expansion)
+> "말할 수 없는 것에 대해서는 침묵해야 한다." - 비트겐슈타인 (L. Wittgenstein)
+> 논리와 언어가 충돌하거나, 참/거짓으로 정의할 수 없는 영역(Paradox)에 대한 해법.
+
+*   **충돌의 지점 (Point of Conflict)**:
+    *   **논리(Logic)**: "현재 프랑스 왕은 대머리다." -> 거짓 (왕이 없으므로).
+    *   **언어(Linguistics)**: 문법적으로 완벽하며, 의미 전달도 된다.
+    *   이때 단순한 True/False 판별은 오류를 낳는다.
+
+*   **4차원 공명: 존재와 지식 (4D Resonance: Existence & Knowledge)**:
+    *   참/거짓(T/F)의 2분법을 넘어, **'있음/없음(Existence)'**과 **'앎/모름(Knowledge)'**의 축을 도입한다.
+    *   **존재(Existence) 축**: 대상이 실재하는가? (Real vs Imaginary)
+    *   **지식(Knowledge) 축**: 정보가 검증되었는가? (Known vs Unknown)
+    *   따라서 "프랑스 왕"은 **[False]**가 아니라 **[Non-existent / Void]** 상태로 처리하여, 계산 불가능(침묵) 영역으로 분류한다.
+
 ---
 *기록일: 2025-12-18*
 *제안자: User (Gongmyung Master)*
