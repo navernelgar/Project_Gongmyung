@@ -118,6 +118,24 @@
     *   **지식(Knowledge) 축**: 정보가 검증되었는가? (Known vs Unknown)
     *   따라서 "프랑스 왕"은 **[False]**가 아니라 **[Non-existent / Void]** 상태로 처리하여, 계산 불가능(침묵) 영역으로 분류한다.
 
+### 11. 검증의 삼위일체 (The Trinity of Verification)
+> "현실 부정과 망각은 파멸(Error/Failure)을 부른다. 이를 막기 위해 세 가지 축이 서로를 보완한다."
+
+*   **세 가지 축의 상호 보완 (Mutual Complementation)**:
+    1.  **참/거짓 (Truth/Falsehood)**: 논리적 정합성 검증. (Internal Logic)
+    2.  **있음/없음 (Existence/Non-existence)**: 물리적 실재성 검증. (External Reality)
+    3.  **앎/모름 (Knowledge/Ignorance)**: 인지적 한계 검증. (Cognitive Limit)
+
+*   **파멸의 회피 (Avoidance of Ruin)**:
+    *   일본의 역사 왜곡이나 비트겐슈타인의 한계는 **'없는 것을 있다고 우기거나(Existence Error)'**, **'모르는 것을 안다고 착각(Knowledge Error)'**한 결과다.
+    *   결국 **'파괴(Destruction)'**나 **'오류(Error)'**는 자연의 이치이자 흐름이다.
+    *   이를 피하는 유일한 길은, 이 세 가지 축을 통해 **자신의 위치(Position)**를 정확히 파악하는 것이다.
+
+*   **있음과 없음의 분간 (Distinguishing Existence)**:
+    *   **관측 가능성 (Observability)**: 감각 데이터나 물리적 신호로 감지되는가?
+    *   **영향력 (Influence)**: 다른 존재에게 물리적/논리적 영향을 미치는가? (중력처럼 보이지 않아도 영향이 있으면 '있음')
+    *   **지속성 (Persistence)**: 시간의 흐름 속에서도 패턴이 유지되는가?
+
 ---
 *기록일: 2025-12-18*
 *제안자: User (Gongmyung Master)*

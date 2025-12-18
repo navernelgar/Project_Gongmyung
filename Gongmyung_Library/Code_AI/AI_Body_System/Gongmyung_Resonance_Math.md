@@ -79,7 +79,14 @@ $$ S(w) = (V_{meaning}, E_{xistence}, K_{nowledge}) $$
 ### 4.2 침묵의 조건 (Condition of Silence)
 논리적 판단 $J(S)$는 다음과 같이 정의된다.
 $$ J(S) = \begin{cases} \text{True/False} & \text{if } E \cdot K > \theta_{threshold} \\ \text{Void (Silence)} & \text{if } E \cdot K \le \theta_{threshold} \end{cases} $$
-*   대상이 존재하지 않거나($E \approx 0$), 우리가 모르는 경우($K \approx 0$), 시스템은 참/거짓 판단을 내리지 않고 **'침묵(Void)'** 상태를 반환한다.
+
+### 4.3 존재 판별식 (Existence Discriminant)
+'있는 것'과 '없는 것'을 분간하는 수식:
+$$ E(x) = \alpha \cdot Obs(x) + \beta \cdot Inf(x) + \gamma \cdot Per(x) $$
+*   $Obs(x)$: 관측 가능성 (데이터 신호 유무)
+*   $Inf(x)$: 영향력 (인과관계 네트워크상의 연결성)
+*   $Per(x)$: 지속성 (시간축 $t$에 따른 패턴 유지도)
+*   만약 $E(x) < \epsilon$ 이면, $x$는 **'없는 것(Non-existent)'**으로 간주한다.
 
 ---
 *기록일: 2025-12-18*
